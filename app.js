@@ -262,8 +262,31 @@ app.post('/set_game_score', function(req, res){
 
 
 
+app.get('/todolist', function(req, res){ res.render('todolist');});
+
+app.get('/healthinfo', function(req, res)
+{ res.render('healthinfo');
 
 
+});
+
+app.post('/healthinfo', function(req, res){
+  let bp_up=req.body.bp_up
+  let age=req.session.user.age
+  let bp_low=req.body.bp_low
+  let blood_sugar=req.body.blood_sugar
+  let gender=req.session.user.gender
+  let userId=req.session.user.userId
+
+  db.none('INSERT INTO health_records (bp_up,bp_low,blood_sugar,userid,age,gender) VALUES($1,$2,$3,$4,$5,$6)',[bp_up,bp_low,blood_sugar,userId,age,gender])
+  .then(()=>{
+    res.render("home")//takes to home page
+
+  }).catch(error => {
+    console.log(error);
+  })
+  
+})
 
 
 
