@@ -36,15 +36,24 @@
                       <form action='/login' method="POST">
                         <div class="form-group">
                           <label for="exampleInputEmail1"><h4>User Name</h4></label>
+                          
+                      
                           <input type="text" name="username" class="form-control" placeholder="Enter user name">
+                          <br>
                     
                         </div>
+                        <br>
                         <div class="form-group">
                           <label for="exampleInputPassword1"><h4>Password</h4></label>
-                          <input type="password" name="password" class="form-control" placeholder="Password">
+                          
+                         
+                          <input type="password" name="password" class="form-control" placeholder="Enter password">
+                          <br>
                         </div>
+                        <br>
+
                     
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn--radius btn--green btn-lg">Submit</button>
                     
                         <% if (message) { %>
                         <div class="alert alert-danger" role="alert">
