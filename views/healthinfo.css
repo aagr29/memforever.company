@@ -217,12 +217,12 @@ body{
     border-radius: 3px;
   }
   
-  .btn--green {
-    background: #2b71f3;
+  #buttonSubmit {
+    background: #5ebaf0;
   }
   
-  .btn--green:hover {
-    background: #8af1f1;
+  #buttonSubmit:hover {
+    background: #aed3e2;
   }
   
   /* ==========================================================================
@@ -359,7 +359,7 @@ body{
   
   .rs-select2 .select2-container .select2-selection--single {
     outline: 5px;
-    color: darkblue;
+    color: rgb(228, 86, 51);
     border: 5px;
     height: 34px;
   }
@@ -441,7 +441,7 @@ body{
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: #fff;
+    background: rgb(247, 229, 223);
   }
   
   .card-1 {
