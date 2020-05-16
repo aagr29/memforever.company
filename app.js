@@ -118,7 +118,7 @@ app.post('/registration',(req,res) => {
          if(error == null){
           db.none('INSERT INTO users(username,password,age,height,gender) VALUES($1,$2,$3,$4,$5)',[username,hash,age,height,gender])
           .then(() => {
-            res.redirect('/')
+            res.redirect('/login')
           })
          }
        })
