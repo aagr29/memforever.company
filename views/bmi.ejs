@@ -33,8 +33,25 @@
             <div class="bmi-info">
                 <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
             </div>
+            <div class="gs-info">
+                <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
+            </div>
+            <div class="mood-avg-info">
+                <div class="mood-avg">your average mood score : <span class="mood-avg-val"></span></div>
+                <div class="mood-suggestive-message"></div>
+            </div>
+
+    
+        </div>
+        
+    </div>
+    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo"></div>
+        <div class='mood-container'>
+            <div id="mood-chart-container"></div>
         </div>
     </div>
+
+  
 </main>
     <!-- Jquery JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -56,6 +73,32 @@
                 $(".bmi-val").html(bmi);
             });
 
+            $.get("/get_latest_gscore", function(result) {
+                var gs = parseFloat(result.result['game_score']);
+                
+
+                
+
+                console.log("game_score:" + gs);
+                $(".gs-val").html(gs);
+            });
+
+            $.get("/get_avg_mood", function(result) {
+                var mood_avg = parseFloat(result.result['mood_avg']);
+                var mood_avg_str=mood_avg.toFixed(2);
+                if (mood_avg>0){
+                    
+                    $('.mood-suggestive-message').html("keep going");
+
+                }else{
+                    $('.mood-suggestive-message').html("This is not looking good");
+                }   
+                
+
+                console.log("mood_avg:" + mood_avg_str);
+                $(".mood-avg-val").html(mood_avg_str);
+            });
+
             $.get("/get_bmi", function(result) {
                 var bmi_data = result;
 
@@ -66,6 +109,8 @@
                         renderTo: 'chart-container',
                         marginBottom: 100
                     },
+                    title: {
+                            text: 'Weight Analysis'},
                     xAxis: {
                         categories: bmi_data["dates"],
                         labels: {
@@ -76,6 +121,32 @@
                     series: [{
                         name: "Weights",
                         data: bmi_data["weights"]        
+                    }]
+                });
+            });
+
+            $.get("/get_all_mood", function(result) {
+                var mood_data = result;
+
+                console.log(mood_data["avg_mood"]);
+
+                var chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'mood-chart-container',
+                        marginBottom: 100
+                    },
+                    xAxis: {
+                        categories: mood_data["dates"],
+                        labels: {
+                        rotation: 90
+                        }
+                    },
+                    title: {
+                            text: 'Mood score analysis'},
+
+                    series: [{
+                        name: "mood score",
+                        data: mood_data["avg_mood"]        
                     }]
                 });
             });

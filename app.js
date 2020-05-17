@@ -217,6 +217,54 @@ app.get('/bmi', (req, res) =>{
 });//if message exists then ejs displays a message
 
 
+//display latest game score
+
+app.get('/get_latest_gscore', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,game_score FROM game_records WHERE userid = $1 ORDER BY game_id DESC LIMIT 1',[userId])
+    .then((result) => {
+      res.status(200).json({'result': result[0]})
+  }).catch(error => {
+    console.log(error);
+  })
+})
+
+//display latest game score
+
+app.get('/get_avg_mood', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,AVG(mood_score) AS mood_avg FROM mood WHERE userid = $1 GROUP BY userid',[userId])
+    .then((result) => {
+      res.status(200).json({'result': result[0]})
+  }).catch(error => {
+    console.log(error);
+  })
+})
+
+app.get('/get_all_mood', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,AVG(mood_score) AS avg_mood,date(date) FROM mood WHERE userid = $1 GROUP BY date(date),userid ORDER BY date(date) ASC',[userId])
+    .then((result) => {
+      let avg_mood = [];
+      let dates = [];
+
+      let data = result;
+
+      for(i=0; i< data.length; i++) {
+        obj = data[i];
+        avg_mood.push(Math.round(parseFloat(obj["avg_mood"]), 2));
+        
+        dates.push(obj["date"]);
+      }
+
+      res.status(200).json({'avg_mood': avg_mood, "dates": dates})
+  }).catch(error => {
+    console.log(error);
+  })
+})
 
   //weight post
 
