@@ -180,7 +180,7 @@ app.post('/registration',(req,res) => {
 app.get('/get_bmi', function(req, res) {
   let userId=req.session.user.userId
 
-  db.any('SELECT userid,AVG(height) AS AVG_HGT,AVG(weight) AS AVG_WGT,date(date_time) FROM weight_records WHERE userid = $1 GROUP BY date(date_time), userid',[userId])
+  db.any('SELECT userid,AVG(height) AS AVG_HGT,AVG(weight) AS AVG_WGT,date(date_time) FROM weight_records WHERE userid = $1 GROUP BY date(date_time), userid ORDER BY date(date_time) ASC',[userId])
     .then((result) => {
       let heights = [];
       let weights = [];
@@ -340,3 +340,29 @@ app.post('/healthinfo', function(req, res){
 
   
   
+// get bp lower u8pper and blood sugar
+app.get('/get_blood_pressure', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,AVG(bp_up) AS avg_bpu,AVG(bp_low) AS avg_bpl,AVG(blood_sugar) AS avg_bs,date(date_time) FROM health_records WHERE userid = $1 GROUP BY date(date_time), userid ORDER BY date(date_time) ASC',[userId])
+    .then((result) => {
+      let avg_bpu = [];
+      let avg_bpl = [];
+      let avg_bs=[]
+      let dates = [];
+
+      let data = result;
+
+      for(i=0; i< data.length; i++) {
+        obj = data[i];
+        avg_bpu.push(Math.round(parseFloat(obj["avg_bpu"]), 2));
+        avg_bpl.push(Math.round(parseFloat(obj["avg_bpl"]), 2));
+        avg_bs.push(Math.round(parseFloat(obj["avg_bs"]), 2));
+        dates.push(obj["date"]);
+      }
+
+      res.status(200).json({'bp_up': avg_bpu,"bp_low": avg_bpl, "blood_sugar":avg_bs, "dates": dates})
+  }).catch(error => {
+    console.log(error);
+  })
+})

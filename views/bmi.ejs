@@ -49,6 +49,9 @@
         <div class='mood-container'>
             <div id="mood-chart-container"></div>
         </div>
+        <div class='mood-container'>
+            <div id="bp-chart-container"></div>
+        </div>
     </div>
 
   
@@ -150,6 +153,38 @@
                     }]
                 });
             });
+            $.get("/get_blood_pressure", function(result) {
+                var data_health = result;
+
+                console.log(data_health["bp_up"]);
+
+                var chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'bp-chart-container',
+                        marginBottom: 100
+                    },
+                    xAxis: {
+                        categories: data_health["dates"],
+                        labels: {
+                        rotation: 90
+                        }
+                    },
+                    title: {
+                            text: 'Blood pressure and blood sugar analysis'},
+
+                                                                                            
+                        series: [{
+                                                                            name: 'blood sugar',
+                                                                            data: data_health["blood_sugar"]
+                                                                        }, {
+                                                                            name: 'blood pressure upper limit',
+                                                                            data: data_health["bp_up"]
+                                                                        }, {
+                                                                            name: 'blood pressure lower limit',
+                                                                            data: data_health["bp_low"]
+                                                                        }],
+    });
+});
         });
     </script>
 
