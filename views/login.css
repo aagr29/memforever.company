@@ -159,7 +159,7 @@
      #BACKGROUND
      ========================================================================== */
   .bg-blue {
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-image: linear-gradient(to top, #e2f1f1 0%, #f4f5db 100%);
   }
   
   /* ==========================================================================
@@ -442,7 +442,7 @@
   }
   
   .card-1 .card-heading {
-    background: url("frontpage11.jpg") center center/cover no-repeat;
+    background: url("bg01.jpg") center center/cover no-repeat;
     opacity: 0.8;
     padding-top: 210px;
   }
