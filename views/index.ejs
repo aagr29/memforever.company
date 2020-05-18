@@ -11,7 +11,8 @@
 </head>
   <body>
       <header>
-                <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
+          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
                     <a class="navbar-brand" href="#">MemForever</a>
                     <!-- icon here  -->
                      <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -26,39 +27,38 @@
                         </li>
                         </li>
                       </ul>
-                      <select data-placeholder="Choose a Language...">
+                      <!-- <select data-placeholder="Choose a Language...">
                         <option value="ZH">Chinese (Mandarin)</option>
                         <option value="EN">English</option>
-                      </select>
+                      </select> -->
                         </div>
                       </div>
                     </div>
                   </nav>
             </header>
             <div class="jumbotron">
-                  <br>
-                  <br>
-                  <!-- <div class="row d-flex justify-content-center text-center"> -->
-                    <!-- <div class="d-inline-flex p-2"> -->
-                      <div class="col-md-6"> 
-                  <a class="btn btn-warning btn-lg" href="/login" role="button">Login</a>
-                  <br>
-                  <br>
-      
-                  <h5 id="regis-text"><strong>For new user, click here to register</strong></h5>
-                  <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
-                </div>
+              <div class="mask rgba-black-light">
                   <div class="row d-flex justify-content-center text-center">
                     <div class="d-inline-flex p-2">
-            <div class="col-md-6"> 
+            <div class="col-md-6">  
               <div class="row d-flex justify-content-center text-center">
               <h3 id="title_mo" class="display-4  pt-5 mb-2">Welcome to <strong>MemForever</strong></h3>
-                <h4 id="title_mo" class="white-text my-4">An platform to track your health, your daily chores, your mood, your cognition and find out your overall progress 
+                <h4 id="title_mo" class="white-text my-4">A platform to track your health, daily chores, mood, cognition and find out your overall well-being 
                 </h4>
             </div>
           </div>
+        </div>
+      </div>
+              </div>
+            <div class="row d-flex justify-content-start text-start"></div>
+            <div class="col-md-6"> 
+            <a class="btn btn-warning btn-lg" href="/login" role="button">Login</a>
+            <br>
+            <br>
+            <h5 id="regis-text"><strong>For new user, click here to register</strong></h5>
+            <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
           </div>
-        
+          </div>
               <br>
             </div>
           </div>
@@ -75,7 +75,7 @@
                   </div>
                 </div>
               </div>
-                  <div class="col">
+                  <div class="col-6">
                     <h4>Mood tracking</h4>
                     <br>
                    <h5>Memforever helps you track your emotion everyday. This information can provide an important cue to you, your family, and your doctor to see how  your moods have changed overtime.</h5>
@@ -84,7 +84,6 @@
             </div>
         </div>
            <br>
-           
             <div class="container fbox" id="card-2">
                 <div class="row" id="row-2">
                   <div class="col">
@@ -92,7 +91,7 @@
                     <br>
                     <h5 id="box-text">Click on Game, you will find a list of simple muliple choice questions aim to to keep your mind sharp. If you play the "game" on a daily basis, the score you received will be recorded to provide you some insight as to how your cognitive ability has progressed.</h5>
                   </div>
-                  <div class="col">
+                  <div class="col-6">
                     <div class="card">
                       <p class="card__image">
                         <img src="brain.jpg" class="card-img-top" alt="...">  
@@ -155,7 +154,7 @@
                             </div>
                         </div>
                         <div class="col">
-                          <h4>Daily Reminder</h4>
+                          <h4>To-do list</h4>
                           <br>
                           <h5>MemForever provides a simple to use to do list platform. 
                             You can add your daily to do tasks and once you have finished them, you can simply remove the task from the list.</h5>

@@ -32,7 +32,7 @@ class item{
 
     	var remove = document.createElement('button');
     	remove.classList.add('remove');
-    	remove.innerHTML = "REMOVE";
+    	remove.innerHTML = "DONE";
     	remove.addEventListener('click', () => this.remove(itemBox, name));
 
     	container.appendChild(itemBox);
