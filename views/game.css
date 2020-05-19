@@ -13,6 +13,8 @@
     }
     
     main{
+        font-size: large;
+    
         --hue: var(--hue-neutral);
         padding: 0;
         margin: 0;
@@ -21,7 +23,7 @@
         height: 100vh;
         justify-content: center;
         align-items: center;
-        background-color: rgb(181, 159, 241);
+        background-color: rgb(165, 224, 230);
         /* background-image: linear-gradient(-225deg, #9EFBD3 0%, #57E9F2 48%, #45D4FB 100%); */
     }
     
@@ -46,6 +48,7 @@
         border-radius: 5px;
         padding: 10px;
         box-shadow: 0 0 10px 1px;
+       
     }
     
     .btn-grid{
@@ -88,8 +91,8 @@
         padding: 0;
         margin: 0;
         display: flex;
-        width: 15vw;
-        height: 15vh;
+        width: 10vw;
+        height: 10vh;
         justify-content: center;
         align-items: center;
     }
@@ -98,6 +101,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
       
     }
     

@@ -164,7 +164,7 @@ body{
      #BACKGROUND
      ========================================================================== */
   .bg-blue {
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-image: linear-gradient(to top, #91ece8 0%, #fed6e3 100%);
   }
   
   /* ==========================================================================
@@ -451,7 +451,7 @@ body{
   }
   
   .card-1 .card-heading {
-    background: url("health01.jpg") center center/cover no-repeat;
+    background: url("bloodpressure.jpeg") center center/cover no-repeat;
     opacity: 0.8;
     padding-top: 210px;
   }

@@ -3,10 +3,13 @@ const startButton= document.getElementById('start-btn')
 const endloop = document.getElementById('answer-buttons')
 const nextButton= document.getElementById('next-btn')
 const endofgamebutton = document.getElementById('endgame')
+const showResultbutton = document.getElementById('showresult')
 
 const questionContainerElements= document.getElementById('question_container')
 const questionElement = document.getElementById('question')
+questionElement.style.fontSize = "150%" ; 
 const answerButtonsElment = document.getElementById('answer-buttons')
+answerButtonsElment.style.fontSize = "150%" ; 
 var score = 0
 
 // set the question randomly
@@ -79,10 +82,12 @@ if(shuffledQuestions.length > currentQuestionIndex +1){
 
 function endloopMethod(){
     endloop.classList.add('hide')
-    document.getElementById('question').innerHTML="Congragulations! Game Finished"
+    document.getElementById('question').innerHTML="Congragulations! Game Finished."
     endofgamebutton.classList.remove('hide')
     process.exit(1)
 }
+
+
 
 function setStatusClass(element, correct){
 
@@ -95,6 +100,7 @@ function setStatusClass(element, correct){
     }
     else{
         element.classList.add('wrong')
+       
     }
 }
 
@@ -106,6 +112,14 @@ element.classList.remove('wrong')
 
 $(document).ready(function(){
     $(document).on("click", "#endgame", function() {
+        $.post("/set_game_score", {game_score: parseInt(score)}, function(){
+            window.location = "/home";
+        });
+    });
+});
+
+$(document).ready(function(){
+    $(document).on("click", "#showresult", function() {
         $.post("/set_game_score", {game_score: parseInt(score)}, function(){
             window.location = "/home";
         });

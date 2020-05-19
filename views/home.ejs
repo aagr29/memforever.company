@@ -12,7 +12,7 @@
 </head>
   <body>
       <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <a class="navbar-brand" href="#">MemForever</a>
             <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z" clip-rule="evenodd"/>
@@ -35,23 +35,23 @@
                       <a class="nav-link" href="/game">Game</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/todolist">Daily Reminder</a>
+                      <a class="nav-link" href="/todolist">To-do list</a>
                     </li>
-           
                   <li class="nav-item">
-                    <a class="nav-link" href='/bmi'>Combined Result</a>
+                    <a class="nav-link" href='/bmi'>Your Progress</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/logout">LOG OUT</a>
-                  </li>
+                  
             </li>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                 </li>
                 </li>
+              </li>
               </ul>
-            
+              <li class="nav-item">
+                <a class="nav-link" href="/logout"><strong>LOG OUT</strong></a>
+              </li>
             </div>
           </nav>
       </header>
@@ -64,47 +64,46 @@
       <br>
       <div class="row justify-content-around">
         <div class="col-10">
-          <h4>
-          </h4>
+          <h3 >Great to see you again !!  Please pick a card ❤️ </h3>
+          
         </div>
       </div>
       <br>
-      
       <main>
         <div class="card-deck">
             <div class="card" style="width: 15rem;">
               <img src="health02.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Health tracking</h5>
-                <p class="card-text">Health tracking shows you how your blood sugar and blood pressure have fluctuated overtime</p>
-                <a href="/healthinfo" id="cardbtn" class="btn btn-primary">Health tracking</a>
+                <h5 class="card-title">Track your health</h5>
+                <p class="card-text">Helps you track your blood sugar and blood pressure overtime</p>
+                <a href="/healthinfo" id="cardbtn" class="btn btn-primary" class="card-title">Health tracking</a>
               </div>
             </div>
         
             <div class="card" style="width: 15rem;">
               <img src="todolist.jpeg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">To-do list</h5>
-                <p class="card-text">Daily reminder provides a simple to use to-do list to help you keep track of your chores</p>
-                <a href="/todolist" id="cardbtn" class="btn btn-primary">To do list </a>
+                <h5 class="card-title">Track your tasks</h5>
+                <p class="card-text">Helps you track your chores with a simple to use to-do list</p>
+                <a href="/todolist" id="cardbtn" class="btn btn-primary">To-do list</a>
               </div>
             </div>
             
             <div class="card" style="width: 15rem;">
               <img src="brain.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Cognitive Game</h5>
-                <p class="card-text"> This game section will help you keep your mind sharp. A total of 8 questions test your cognitive progress, your score will be stored and tracked for your reference.</p>
-                <a href="/game" id="cardbtn" class="btn btn-primary">play game</a>
+                <h5 class="card-title">Track your mind</h5>
+                <p class="card-text"> A simple game keeps your mind sharp. A total of eight questions to test your cognitive progress, your score will be stored for your reference.</p>
+                <a href="/game" id="cardbtn" class="btn btn-primary">Play game</a>
               </div>
               
             </div>
             <div class="card" style="width: 15rem;">
               <img src="data.jpeg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">your over all progress</h5>
-                <p class="card-text"> This sections show track record in graph with your mood, blood pressure, blood sugar, bmi and game score. If you are using this website for the first time, this section will be empty</p>
-                <a href="/bmi" id="cardbtn" class="btn btn-primary">overall progress</a>
+                <h5 class="card-title">Track your progress</h5>
+                <p class="card-text"> Helps you keep track of your progress in mood, blood pressure, blood sugar, bmi and game score. If you are using this website for the first time, this section will be empty</p>
+                <a href="/bmi" id="cardbtn" class="btn btn-primary">See your progress</a>
               </div>
           </div>
           

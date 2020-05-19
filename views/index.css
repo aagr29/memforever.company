@@ -4,10 +4,18 @@ body{
   background-image: linear-gradient(to top, #f3efef 0%, #f5efef 100%);
 }
 
+
 .col{
 
   margin-left: 0;
 }
+
+#box_01{
+
+  background-image: url('mood02.jpeg');
+
+}
+
 
 .jumbotron{
 

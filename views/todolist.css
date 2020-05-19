@@ -6,8 +6,8 @@
 
   body{
 
-	/* background-color: pink; */
-	background: url(todo01.jpg) no-repeat center center fixed; 
+	background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+	
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover; 
@@ -94,7 +94,7 @@ h1 {
 	background: none;
 	outline: none;
 	border: none;
-	color: lime;
+	color: rgb(4, 0, 255);
 	font-size: 1.4rem;
 	font-family: 'Hind', sans-serif;
 	margin: 0 0.5rem;
@@ -116,9 +116,9 @@ h1 {
 	text-align: center;
 }
 
-h3{
+h4{
 	text-align: center;
 	/* color: rgb(241, 12, 12); */
 	color: black;
-	font-family: Tahoma;
+	font-family: Helvetica;
 }
