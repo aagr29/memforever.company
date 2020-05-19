@@ -142,7 +142,7 @@ h2{
 
   h4{
 
-  font-family: Geneva;
+  font-family: Helvetica;
   }
   
   .card-img-top{
@@ -150,3 +150,13 @@ h2{
     height: 40%;
   } 
 
+  .footer {
+	
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    background-color: rgb(12, 11, 11);
+    color: white;
+    text-align: center;
+    }
