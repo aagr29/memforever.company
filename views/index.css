@@ -253,6 +253,12 @@ h3{
   margin-left: 0rem;
 }
 
+.col{
+  /* padding-right: 85px; */
+  padding-left: 85px
+
+}
+
  #text-card-3{
   /* padding: 0rem 2rem 0rem; */
   padding-right: 85px;
