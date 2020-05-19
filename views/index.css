@@ -1,7 +1,7 @@
 body{
 
   /* background-color: rgb(245, 243, 244); */
-  background-image: linear-gradient(to top, #f3efef 0%, #f5efef 100%);
+  background-image: linear-gradient(to top, #ffffff 0%, #e4e3e3 100%);
 }
 
 
@@ -22,7 +22,7 @@ body{
  
   background-image: url("frontpage01.jpeg");
 
-  height: 100vh;
+  height: 110vh;
   background-position: center 20%;
   background-size: cover;
 
@@ -111,7 +111,7 @@ body{
   .card{
     /*   width: calc(100% / 3 - 100px); */
       width: 450px;
-      height: 400px;
+      height: 380px;
       margin: 10px;
       box-shadow: 0px 3px 6px #00000050;
       transition: .5s;
@@ -169,23 +169,37 @@ body{
     background-color: #faf4f4;
   }
 
- h5{
+ /* h5{
 
   margin-left: 2rem;
   margin-right: 1rem;
 
+ } */
+
+ #title_mo{
+
+  font-family:  Tahoma;
+  
+  color: rgb(2, 53, 77);
  }
 
- h4{
+ h5{
+  font-family: Helvetica;
+  color: rgb(2, 53, 77);
+  line-height: 1.5 ;
  
-  margin-left: 2rem;
-  color: rgb(7, 119, 172);
+}
+
+ h4{
+  font-family:  Tahoma;
+  
+  color: rgb(219, 78, 12);
  
 }
 
 h3{
-  font-family: Tahoma;
-  color: rgb(225, 91, 50);
+  font-family: Georgia;
+  color:#030303;
 }
 
 .container-1{
@@ -239,23 +253,19 @@ h3{
   margin-left: 0rem;
 }
 
-/* .row:hover{
- transform: translateY(-10px);
-    transition: .5s; 
-    box-shadow: 0 0 30px rgba(0,0,0,.2);
-  background-color: rgb(250, 248, 250);
-} */
+ #text-card-3{
+  /* padding: 0rem 2rem 0rem; */
+  padding-right: 85px;
+    padding-left: 85px;
+}
 
-/* #row-4:hover{
- transform: translateY(-10px);
-    transition: .5s; 
-    box-shadow: 0 0 30px rgba(0,0,0,.2);
-  background-color: rgb(250, 248, 250);
-} 
-
-#row-2:hover{
-  transform: translateY(-10px);
-     transition: .5s; 
-     box-shadow: 0 0 30px rgba(0,0,0,.2);
-   background-color: rgb(250, 248, 250);
- }  */
+.footer {
+	
+	left: 0;
+	bottom: 0;
+  width: 100%;
+  
+	background-color: rgb(16, 15, 15);
+	color: white;
+	text-align: center;
+  }

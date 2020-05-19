@@ -208,7 +208,7 @@ iframe {
 }
 
 .login100-form-logo {
-  background: url("health01.jpg") center center/cover no-repeat;
+  background: url("bg01.jpg") center center/cover no-repeat;
   opacity: 0.8;
   padding-top: 210px;
   font-size: 60px; 
@@ -546,3 +546,8 @@ iframe {
   }
 }
 
+h5{
+
+  font-family: Helvetica;
+  
+}

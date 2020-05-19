@@ -122,3 +122,14 @@ h4{
 	color: black;
 	font-family: Helvetica;
 }
+
+.footer {
+	
+	left: 0;
+	bottom: 0;
+  width: 100%;
+  
+	background-color: rgb(12, 11, 11);
+	color: white;
+	text-align: center;
+  }
