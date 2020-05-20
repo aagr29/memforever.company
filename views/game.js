@@ -156,7 +156,7 @@ const questions = [
     answers: [
     {text: 'Tigar', correct: false},
     {text: 'Sugar', correct: false},
-    {text: 'Spider', correct: false},
+    {text: 'Spoon', correct: false},
     {text: 'Skunk', correct: true},]
     },
     {QID: "5", 
@@ -180,8 +180,8 @@ const questions = [
     answers: [
     {text: '31', correct: false},
     {text: '32', correct: false},
-    {text: '33', correct: false},
-    {text: '34', correct: true},]
+    {text: '33', correct: true},
+    {text: '34', correct: false},]
     },
     {QID: "8",
     question: "5 + 2 = ",
@@ -208,12 +208,12 @@ const questions = [
     {text: 'unknown', correct: false},]
     },
     {QID: "11",
-    question: "Fill in the missing word: An Espress Book Machine (EBM) prints and binds a high-quality copy of a book right in the store, in just a few minutes. There’s a catalogue of millions of books to choose from, including rare manuscripts and books that publishers are no longer _______",
+    question: "What to bring on a rainning day?",
     answers: [
-    {text: 'printing', correct: true},
-    {text: 'asking', correct: false},
-    {text: 'seeking', correct: false},
-    {text: 'recommending', correct: false},]
+    {text: 'umbrella', correct: true},
+    {text: 'instant noodle', correct: false},
+    {text: 'labtop', correct: false},
+    {text: 'sunscreen', correct: false},]
     },
     {QID: "12",
     question: "Which of the following is the opposite of the word dark?",
@@ -247,4 +247,16 @@ const questions = [
     {text: 'hospital', correct: false},
     {text: 'homeless', correct: false},]
     },
+    {QID: "16",
+    question: "Which one is a city?",
+    answers: [
+    {text: 'Victoria', correct: false},
+    {text: 'Queensland', correct: false},
+    {text: 'Sydney', correct: true},
+    {text: 'New South Wales', correct: false},]
+    },
   ];
+
+
+ 
+  
