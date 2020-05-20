@@ -1,12 +1,12 @@
 .bmi-container {
     width: 980px;
     margin: 0 auto;
-    background-color: red;
+    background-color: rgb(164, 236, 82);
 }
 .mood-container {
     width: 980px;
     margin: 0 auto;
-    background-color: red;
+    background-color: rgb(154, 231, 81);
 }
 
 .footer {
@@ -19,3 +19,9 @@
     color: white;
     text-align: center;
     }
+
+#title{
+    font-family: Tahoma;
+    color: rgb(39, 52, 231);
+    text-align: center;
+}
