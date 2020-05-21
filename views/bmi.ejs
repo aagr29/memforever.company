@@ -118,6 +118,10 @@
         <div class='mood-container'>
             <div id="bp-chart-container"></div>
         </div>
+        <div class='mood-container'>
+            <div id="bmiall-chart-container"></div>
+        </div>
+        
     </div>
 
   
@@ -216,9 +220,18 @@
                     series: [{
                         name: "mood score",
                         data: mood_data["avg_mood"]        
-                    }]
+                    },{
+                    name: 'You should be here',
+                 data: mood_data["upper_limit"]
+                },{
+                 name: 'You should not be here',
+                data: mood_data["lower_limit"]
+                 },{
+             name: 'You are in danger zone',
+                data: mood_data["llm"]
+            }]
                 });
-            });
+            
             $.get("/get_blood_pressure", function(result) {
                 var data_health = result;
 
@@ -240,16 +253,60 @@
 
                                                                                             
                         series: [{
-                                                                            name: 'blood sugar',
-                                                                            data: data_health["blood_sugar"]
+                                 name: 'blood sugar',
+                                 data: data_health["blood_sugar"]
+                                }, 
+                                {
+                                name: 'blood pressure upper limit',
+                                data: data_health["bp_up"]
+                                }, 
+                                {
+                                name: 'blood pressure lower limit',
+                                 data: data_health["bp_low"]
+                                }],
+    });
+    $.get("/get_bmi_all", function(result) {
+                var bmi_data = result;
+
+                
+
+                var chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'bmiall-chart-container',
+                        marginBottom: 100
+                    },
+                    xAxis: {
+                        categories: bmi_data["dates"],
+                        labels: {
+                        rotation: 90
+                        }
+                    },
+                    title: {
+                            text: 'BMI Analysis'},
+
+                                                                                            
+                        series: [{
+                                                                            name: 'BMI',
+                                                                            data: bmi_data["bmi"]
                                                                         }, {
-                                                                            name: 'blood pressure upper limit',
-                                                                            data: data_health["bp_up"]
+                                                                            name: 'Below this your underweight',
+                                                                            data: bmi_data["bmi lower"]
                                                                         }, {
-                                                                            name: 'blood pressure lower limit',
-                                                                            data: data_health["bp_low"]
+                                                                            name: 'above this you are overweight',
+                                                                            data: bmi_data["bmi normal"]
+                                                                        },{
+                                                                            name: 'above this you are obese',
+                                                                            data: bmi_data["bmi over"]
+                                                                        },{
+                                                                            name: 'above this you are obese type 1',
+                                                                            data: bmi_data["bmi_obese"]
+                                                                        },{
+                                                                            name: 'above this you are obese type 2',
+                                                                            data: bmi_data["bmi_obese1"]
                                                                         }],
     });
+});
+});
 });
         });
     </script>
