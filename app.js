@@ -250,17 +250,22 @@ app.get('/get_all_mood', function(req, res) {
     .then((result) => {
       let avg_mood = [];
       let dates = [];
+      let um=[]
+      let lm=[]
+      let llm=[]
 
       let data = result;
 
       for(i=0; i< data.length; i++) {
         obj = data[i];
         avg_mood.push(Math.round(parseFloat(obj["avg_mood"]), 2));
-        
+        um.push(Math.round(parseFloat(2), 2));
+        lm.push(Math.round(parseFloat(-2), 2));
+        llm.push(Math.round(parseFloat(-5), 2));
         dates.push(obj["date"]);
       }
 
-      res.status(200).json({'avg_mood': avg_mood, "dates": dates})
+      res.status(200).json({'avg_mood': avg_mood, 'upper_limit':um,'lower_limit':lm,"llm":llm,"dates": dates})
   }).catch(error => {
     console.log(error);
   })
@@ -369,7 +374,7 @@ app.get('/get_blood_pressure', function(req, res) {
 
 
 
-// get weight and height for all days for user
+// bmi chart 
 app.get('/get_bmi_all', function(req, res) {
   let userId=req.session.user.userId
 

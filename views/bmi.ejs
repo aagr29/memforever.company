@@ -220,9 +220,18 @@
                     series: [{
                         name: "mood score",
                         data: mood_data["avg_mood"]        
-                    }]
+                    },{
+                    name: 'You should be here',
+                 data: mood_data["upper_limit"]
+                },{
+                 name: 'You should not be here',
+                data: mood_data["lower_limit"]
+                 },{
+             name: 'You are in danger zone',
+                data: mood_data["llm"]
+            }]
                 });
-            });
+            
             $.get("/get_blood_pressure", function(result) {
                 var data_health = result;
 
@@ -244,15 +253,17 @@
 
                                                                                             
                         series: [{
-                                                                            name: 'blood sugar',
-                                                                            data: data_health["blood_sugar"]
-                                                                        }, {
-                                                                            name: 'blood pressure upper limit',
-                                                                            data: data_health["bp_up"]
-                                                                        }, {
-                                                                            name: 'blood pressure lower limit',
-                                                                            data: data_health["bp_low"]
-                                                                        }],
+                                 name: 'blood sugar',
+                                 data: data_health["blood_sugar"]
+                                }, 
+                                {
+                                name: 'blood pressure upper limit',
+                                data: data_health["bp_up"]
+                                }, 
+                                {
+                                name: 'blood pressure lower limit',
+                                 data: data_health["bp_low"]
+                                }],
     });
     $.get("/get_bmi_all", function(result) {
                 var bmi_data = result;
@@ -265,7 +276,7 @@
                         marginBottom: 100
                     },
                     xAxis: {
-                        categories: data_health["dates"],
+                        categories: bmi_data["dates"],
                         labels: {
                         rotation: 90
                         }
@@ -294,6 +305,7 @@
                                                                             data: bmi_data["bmi_obese1"]
                                                                         }],
     });
+});
 });
 });
         });
