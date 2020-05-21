@@ -1,25 +1,15 @@
-body{
 
-    /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
-    background-image: linear-gradient(to right, #c7f8d6 0%, #eba79b 100%);
+html {
+position: relative;
+  min-height: 100%;
 }
 
-/* .container{
-    margin: 0%;
-    padding: 0%;
-    margin-left: 7rem;
-} */
+body{
 
-/* .display-4{
-    text-align: center;
-} */
-
-/* h5{
-   
-    margin-left: 8rem;
-    margin-left: 5rem;
-    font-family: Helvetica;
-} */
+    /* this will fix the footer at button of the page  */
+    margin-bottom: 100px;
+    background-image: linear-gradient(to right, #c7f8d6 0%, #eba79b 100%);
+}
 
 h3{
     text-align: center;
@@ -31,8 +21,6 @@ img{
     width: 150px;
     height: 150px;
     margin-left: 3rem;
-    /* margin: 0rem;
-    padding: 0rem; */
 }
 
 input{
@@ -67,35 +55,17 @@ input{
 	top:1px;
 }
 
-/* .emotion-record-btn:hover{
-        color: #fff;
-        background-color: #00b3db;
-        border-color: #285e8e; /*set the color you want here
-    } */
 
 .col-md-3{
-    /* margin-left: 1rem; */
-    /* background-color:  */
-    /* border-style: solid; */
-    /* border-width: 3px; */
-    /* border-left-width: 5px;
-    border-right-width: 5px; */
+
     transform: translateY(-20px); 
     transition: .5s;
-    /* box-shadow: 0 0 3px rgb(146, 125, 125); */
-    /* box-shadow: 0 0 3px rgb(249, 246, 246);  */
 }
 
   h2{
     font-family: Monaco;
   }
 
-      
-/* .container{
-
-    margin-left: 10rem;
-    
-}  */
 
 #result{
 
@@ -113,12 +83,13 @@ text-align: center;
 }
 
 .footer {
-	
-	left: 0;
-	bottom: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
   width: 100%;
-  
-	background-color:rgb(12, 11, 11);
-	color: white;
-	text-align: center;
-  }
+  background-color: #040404;
+  text-align: center;
+  color: aliceblue; 
+  position: absolute;
+} 
+

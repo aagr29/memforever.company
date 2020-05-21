@@ -133,6 +133,7 @@
     </main>
     <br>
     <br>
+    <!-- <div class="navbar fixed-bottom" id="footer">  -->
     <footer class="footer">
         <!-- Copyright -->
         <!-- ❤️  -->
@@ -145,6 +146,7 @@
         <br>
         <!-- Copyright -->
     </footer>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -155,8 +157,6 @@
             $.post("/set_mood", {mood_score: parseInt($(this).data("emotion-type"))}, function(result){
                 window.location = "/home";
             });
-
-
         });
     </script>
 </body>
