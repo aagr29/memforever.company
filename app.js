@@ -366,3 +366,51 @@ app.get('/get_blood_pressure', function(req, res) {
     console.log(error);
   })
 })
+
+
+
+// get weight and height for all days for user
+app.get('/get_bmi_all', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,AVG(height) AS AVG_HGT,AVG(weight) AS AVG_WGT,date(date_time) FROM weight_records WHERE userid = $1 GROUP BY date(date_time), userid ORDER BY date(date_time) ASC',[userId])
+    .then((result) => {
+      // let heights = [];
+      // let weights = [];
+      let dates = [];
+      let bmi=[]
+      let bmi_under=[]
+      let bmi_normal=[]
+      let bmi_over=[]
+      let bmi_obese=[]
+      let bmi_obese1=[]
+
+      let data = result;
+
+      for(i=0; i< data.length; i++) {
+        obj = data[i];
+        var h= obj["avg_hgt"]
+        var w= obj["avg_wgt"]
+        var b=parseFloat((w/(h*h)) * 10000).toFixed(2);
+        bmi.push(Math.round(parseFloat(b), 2));
+        bmi_under.push(Math.round(parseFloat(18), 2));
+        bmi_normal.push(Math.round(parseFloat(25), 2));
+        bmi_over.push(Math.round(parseFloat(30), 2));
+        bmi_obese.push(Math.round(parseFloat(40), 2));
+        bmi_obese1.push(Math.round(parseFloat(50), 2));
+        dates.push(obj["date"]);
+      }
+
+     
+
+      res.status(200).json({'bmi': bmi,'bmi lower': bmi_under,'bmi normal':bmi_normal,'bmi over' : bmi_over,'bmi_obese':bmi_obese,'bmi obese1':bmi_obese1, "dates": dates})
+  }).catch(error => {
+    console.log(error);
+  })
+})
+
+
+// var height = parseFloat(result.result['height']);
+//                 var weight = parseFloat(result.result['weight']);
+
+//                 var bmi = parseFloat((weight/(height*height)) * 10000).toFixed(2);
