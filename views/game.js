@@ -68,10 +68,10 @@ clearStatusClass(document.body)
 function selectAnswer(e){
 const selectedButton = e.target
 const correct = selectedButton.dataset.correct
-setStatusClass(document.body, correct)
-Array.from(answerButtonsElment.children).forEach(button=>{
-    setStatusClass(button, button.dataset.correct)
-})
+setScore(document.body, correct)
+ Array.from(answerButtonsElment.children).forEach(button=>{
+     setStatusClass(button, button.dataset.correct)
+ })
 if(shuffledQuestions.length > currentQuestionIndex +1){
 
     nextButton.classList.remove('hide')
@@ -93,16 +93,30 @@ function setStatusClass(element, correct){
 
     clearStatusClass(element)
     if (correct){
-        element.classList.add('correct')
-        console.log("correct");
-        score  = score + 1;
-        console.log(score);  
+        element.classList.add('correct') 
+    }
+    else{
+        element.classList.add('wrong')       
+    }
+}
+
+function setScore(element, correct){
+
+    clearStatusClass(element)
+    console.log(correct)
+    if (correct){
+        //element.classList.add('correct')
+        score  = score+1;
+        console.log("The current score is: " +score);  
     }
     else{
         element.classList.add('wrong')
+        //score = score;
+        console.log("The current score is: " +score); 
        
     }
 }
+
 
 function clearStatusClass(element){
 element.classList.remove('correct')
