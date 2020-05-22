@@ -1,0 +1,66 @@
+html {
+	position: relative;
+	  min-height: 100%;
+    }
+    
+body{
+    margin-bottom: 120px;
+}
+
+/* .bmi-container {
+    width: 980px;
+    margin: 0 auto;
+    background-color: rgb(253, 253, 253);
+} */
+.mood-container {
+    width: 980px;
+    margin: 0 auto;
+    background-color: rgb(154, 231, 81);
+}
+
+.bmi{
+    width: 980px;
+    margin: 0 auto;
+    background-color: rgb(164, 236, 82);
+
+}
+
+.gs-info{
+    width: 980px;
+    margin: 0 auto;
+    background-color: rgb(59, 221, 250);
+}
+
+#mood-chart-container{
+
+    background-color: darksalmon;
+}
+
+#bp-chart-container{
+
+    background-color: gold;
+}
+
+.mood-avg-info{
+
+    width: 980px;
+    margin: 0 auto;
+    background-color: rgb(250, 162, 203);
+}
+
+.footer {
+	
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(12, 11, 11);
+    color: white;
+    text-align: center;
+    }
+
+#title{
+    font-family: Tahoma;
+    color: rgb(39, 52, 231);
+    text-align: center;
+}

@@ -192,7 +192,12 @@ app.get('/get_bmi', function(req, res) {
         obj = data[i];
         heights.push(Math.round(parseFloat(obj["avg_hgt"]), 2));
         weights.push(Math.round(parseFloat(obj["avg_wgt"]), 2));
-        dates.push(obj["date"]);
+        var timestamp=obj["date"]
+        var todate=new Date(timestamp).getDate();
+        var tomonth=new Date(timestamp).getMonth()+1;
+        var toyear=new Date(timestamp).getFullYear();
+        var original_date=todate+'/'+tomonth+'/'+toyear;
+        dates.push(original_date);
       }
 
       res.status(200).json({'heights': heights, "weights": weights, "dates": dates})
@@ -262,6 +267,7 @@ app.get('/get_all_mood', function(req, res) {
         um.push(Math.round(parseFloat(2), 2));
         lm.push(Math.round(parseFloat(-2), 2));
         llm.push(Math.round(parseFloat(-5), 2));
+        
         dates.push(obj["date"]);
       }
 
@@ -295,6 +301,9 @@ app.get('/get_all_mood', function(req, res) {
 
   app.get('/game', function(req, res){
      res.render('game');
+});
+app.get('/dashboard', function(req, res){
+  res.render('dashboard');
 });
 
 app.post('/set_game_score', function(req, res){

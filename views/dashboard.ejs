@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Login</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Main CSS-->
+    <link href="bmi.css" rel="stylesheet" media="all">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bmianalysis">BMI</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2 id="title">Here is your record</h2>
+        <br>
+        <br>
+        <br>
+
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <section id="bmianalysis">
+                <div class="bmi-container">
+                    <div id="chart-container"></div>
+
+                    <div class="bmi-info">
+                        <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="gs-info">
+                        <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="mood-avg-info">
+                        <div class="mood-avg">your average mood score : <span class="mood-avg-val"></span></div>
+                        <div class="mood-suggestive-message"></div>
+                    </div>
+
+
+                </div>
+            </section>    
+
+        </div>
+
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo"></div>
+        <div class='mood-container'>
+            <div id="mood-chart-container"></div>
+        </div>
+        <div class='mood-container'>
+            <div id="bp-chart-container"></div>
+        </div>
+        <div class='mood-container'>
+            <div id="bmiall-chart-container"></div>
+        </div>
+
+        </div>
+
+
+    </main>
+    <!-- Jquery JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.get("/get_latest_bmi", function (result) {
+                var height = parseFloat(result.result['height']);
+                var weight = parseFloat(result.result['weight']);
+
+                var bmi = parseFloat((weight / (height * height)) * 10000).toFixed(2);
+
+                console.log("BMI:" + bmi);
+                $(".bmi-val").html(bmi);
+            });
+
+            $.get("/get_latest_gscore", function (result) {
+                var gs = parseFloat(result.result['game_score']);
+
+
+
+
+                console.log("game_score:" + gs);
+                $(".gs-val").html(gs);
+            });
+
+            $.get("/get_avg_mood", function (result) {
+                var mood_avg = parseFloat(result.result['mood_avg']);
+                var mood_avg_str = mood_avg.toFixed(2);
+                if (mood_avg > 0) {
+
+                    $('.mood-suggestive-message').html("keep going");
+
+                } else {
+                    $('.mood-suggestive-message').html("This is not looking good");
+                }
+
+
+                console.log("mood_avg:" + mood_avg_str);
+                $(".mood-avg-val").html(mood_avg_str);
+            });
+
+            $.get("/get_bmi", function (result) {
+                var bmi_data = result;
+
+                console.log(bmi_data["weights"]);
+
+                var chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'chart-container',
+                        marginBottom: 100
+                    },
+                    title: {
+                        text: 'Weight Analysis'
+                    },
+                    xAxis: {
+                        categories: bmi_data["dates"],
+                        labels: {
+                            rotation: 90
+                        }
+                    },
+
+                    series: [{
+                        name: "Weights",
+                        data: bmi_data["weights"]
+                    }]
+                });
+            });
+
+            $.get("/get_all_mood", function (result) {
+                var mood_data = result;
+
+                console.log(mood_data["avg_mood"]);
+
+                var chart = new Highcharts.Chart({
+                    chart: {
+                        renderTo: 'mood-chart-container',
+                        marginBottom: 100
+                    },
+                    xAxis: {
+                        categories: mood_data["dates"],
+                        labels: {
+                            rotation: 90
+                        }
+                    },
+                    title: {
+                        text: 'Mood score analysis'
+                    },
+
+                    series: [{
+                        name: "mood score",
+                        data: mood_data["avg_mood"]
+                    }, {
+                        name: 'You should be here',
+                        data: mood_data["upper_limit"]
+                    }, {
+                        name: 'You should not be here',
+                        data: mood_data["lower_limit"]
+                    }, {
+                        name: 'You are in danger zone',
+                        data: mood_data["llm"]
+                    }]
+                });
+
+                $.get("/get_blood_pressure", function (result) {
+                    var data_health = result;
+
+                    console.log(data_health["bp_up"]);
+
+                    var chart = new Highcharts.Chart({
+                        chart: {
+                            renderTo: 'bp-chart-container',
+                            marginBottom: 100
+                        },
+                        xAxis: {
+                            categories: data_health["dates"],
+                            labels: {
+                                rotation: 90
+                            }
+                        },
+                        title: {
+                            text: 'Blood pressure and blood sugar analysis'
+                        },
+
+
+                        series: [{
+                            name: 'blood sugar',
+                            data: data_health["blood_sugar"]
+                        },
+                        {
+                            name: 'blood pressure upper limit',
+                            data: data_health["bp_up"]
+                        },
+                        {
+                            name: 'blood pressure lower limit',
+                            data: data_health["bp_low"]
+                        }],
+                    });
+                    $.get("/get_bmi_all", function (result) {
+                        var bmi_data = result;
+
+
+
+                        var chart = new Highcharts.Chart({
+                            chart: {
+                                renderTo: 'bmiall-chart-container',
+                                marginBottom: 100
+                            },
+                            xAxis: {
+                                categories: bmi_data["dates"],
+                                labels: {
+                                    rotation: 90
+                                }
+                            },
+                            title: {
+                                text: 'BMI Analysis'
+                            },
+
+
+                            series: [{
+                                name: 'BMI',
+                                data: bmi_data["bmi"]
+                            }, {
+                                name: 'Below this your underweight',
+                                data: bmi_data["bmi lower"]
+                            }, {
+                                name: 'above this you are overweight',
+                                data: bmi_data["bmi normal"]
+                            }, {
+                                name: 'above this you are obese',
+                                data: bmi_data["bmi over"]
+                            }, {
+                                name: 'above this you are obese type 1',
+                                data: bmi_data["bmi_obese"]
+                            }, {
+                                name: 'above this you are obese type 2',
+                                data: bmi_data["bmi_obese1"]
+                            }],
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <!-- Copyright -->
+        <!-- ❤️  -->
+        <br>
+        <br>
+        <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
+            <a class="white-text"> <strong>ACQP IT</strong> </a>.
+        </div>
+        <br>
+        <br>
+        <!-- Copyright -->
+    </footer>
+
+</html>
+<!-- end document-->
