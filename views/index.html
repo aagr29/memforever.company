@@ -168,14 +168,14 @@
       <div class="col-md-4 card-container">
         <div class="card card-flip">
           <div class="front card-block">
-            <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+            <span class="card-img-top fa" style="font-size: 4em"><img src="todolist01.jpg" class="card-img-top" alt="..."></span>
+            
             <h4 class="card-title">Front Title</h4>
             <h6 class="card-subtitle text-muted">Front Sub-title</h6>
             <p class="card-text">Front Text</p>
           </div>
           <div class="back card-block">
-            <p>Some example short text</p>
-            <!-- <a href="#" class="btn btn-outline-primary">Read More</a> -->
+            <span class="card-img-top fa" style="font-size: 4em"><img src="todolist01.jpg" class="" alt="..."></span>
           </div>
         </div>
       </div>
@@ -189,7 +189,7 @@
           </div>
           <div class="back card-block">
             <p>Some example text</p>
-            <!-- <a href="#" class="btn btn-outline-primary">Read More</a> -->
+            <a href="#" class="btn btn-outline-primary">Read More</a>
           </div>
         </div>
       </div>
@@ -327,9 +327,7 @@
             <h6>About</h6>
             <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
           </div>
-
           <div class="col-xs-6 col-md-3">
-          
           </div>
 
           <div class="col-xs-6 col-md-3">
@@ -362,6 +360,32 @@
 <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_UVDY7k.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      var front = document.getElementsByClassName("front");
+      var back = document.getElementsByClassName("back");
+    
+      var highest = 0;
+      var absoluteSide = "";
+    
+      for (var i = 0; i < front.length; i++) {
+        if (front[i].offsetHeight > back[i].offsetHeight) {
+          if (front[i].offsetHeight > highest) {
+            highest = front[i].offsetHeight;
+            absoluteSide = ".front";
+          }
+        } else if (back[i].offsetHeight > highest) {
+          highest = back[i].offsetHeight;
+          absoluteSide = ".back";
+        }
+      }
+      $(".front").css("height", highest);
+      $(".back").css("height", highest);
+      $(absoluteSide).css("position", "absolute");
+    });
+    
+  </script>
   </body>
 </html>
