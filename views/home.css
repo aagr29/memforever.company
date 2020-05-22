@@ -58,8 +58,9 @@ h2{
   h4{
 
   font-family: Helvetica;
-  /* text-align: justify; */ 
-  /* text-justify: distribute-all-lines; */
+  /* text-align: justify; 
+  text-justify: distribute-all-lines;
+  width: 240px; */
   }
   
   .card-img-top{
