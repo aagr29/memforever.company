@@ -142,13 +142,16 @@ body{
   font-family: Helvetica;
   color: rgb(2, 53, 77);
   line-height: 1.5 ;
+  text-align: justify;
+  text-justify: distribute-all-lines;
  
 }
 
  h4{
   font-family:  Tahoma;
-  
   color: rgb(219, 78, 12);
+  text-align: justify;
+  text-justify: distribute-all-lines;
  
 }
 

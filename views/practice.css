@@ -190,7 +190,7 @@
         }
         @keyframes breatheTextAnim {
             60%, 100% { content: "Keep going" }
-            0%, 59% { content: "Practice make it better" }
+            0%, 59% { content: "You can do it!" }
             100%, 0%, 12%, 50%, 62% { opacity: 0 }
             15%, 40%, 65%, 90% { opacity: 1 }
         }

@@ -8,34 +8,187 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="practice.css">
+  <link rel="stylesheet" href="practice01.css">
   </head>
-  <div class="container-1">
-    <div class="row">
-      <div class="col align-self-start">
-        One of three columns
+   <body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body, html {
+      height: 100%;
+    }
+    
+    .parallax {
+      /* The image used */
+      background-image: url('frontpage02.jpeg');
+    
+      /* Full height */
+      height: 100%; 
+    
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="parallax"></div>
+    
+    <main>
+      <div class="jumbotron jumbotron-fluid">
+                <div class="d-flex p-2">
+                    <div class="col-md-6">
+                        <div class="row d-flex justify-content-center text-center">
+                            <h3 id="title" class="display-4 pt-5 mb-2">Welcome to <span style="font-weight: bold; font-style: italic; color: rgb(214, 131, 7);">MemForever</span></h3>
+                            <h4 id="title_mo" class="white-text my-4">
+                                A platform dedicated to help dementia patients. Once registered, MemForever helps you track your health, daily chores, mood and find out your overall well-being with your health Data Analysis Report.
+                            </h4>
+                    <div class="col-md-8"> 
+                        <a class="btn btn-lg btn-warning" href="/login" role="button" id="button">Login</a>
+                        <br>
+                        <br>
+                        <br>
+                        <h5 id="regis-text"><strong>For new user, click here to register</strong></h5>
+                        <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
+                    </div>
+                </div>
+                <br />
+            </div>
+        </div>
+    </div>
       </div>
-      <div class="col align-self-center">
-        One of three columns
       </div>
-      <div class="col align-self-end">
-        One of three columns
+    <br />
+<!-- this is the second section -->
+<!-- first row  -->
+<div class="container fbox">
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+      <div class="card">
+        <p class="card__image">
+          <img src="mood02.jpeg" class="card-img-top" alt="...">
+        </div>
       </div>
     </div>
+    <div class=" col-lg-6 col-sm-12" id="text-card-3">
+      <h4>Mood tracking</h4>
+      <br>
+    <h5>Memforever helps you track your emotion everyday. This information can provide an important cue to you, your family, and your doctor to see how your moods have changed overtime.</h5>
+    </div>
+    </div>
+    </div>
   </div>
-    <body>
-      <main>
-          <label class="breathe-text"></label>
-          <div class="pufferfish">
-              <div class="pufferfish__lips"></div>
-              <div class="pufferfish__tail"></div>
-              <div class="pufferfish__body"></div>
-              <div class="pufferfish__eye"></div>
-              <div class="pufferfish__fin-pectoral"></div>
-              <div class="pufferfish__spikes"></div>
+</div>
+<br>
+<!-- second row  -->
+  <div class="container fbox" id="card-2">
+          <div class="col-lg-6 col-sm-12" id="text-card-3">
+          <h4>Cognitive Game</h4>
+          <br>
+          <h5> Memforever provides a list of simple muliple choice questions aim to to keep your mind sharp. If you play the "game" on a daily basis, the score you received will be recorded to provide you some insight on your cognitive progression.</h5>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <div class="card">
+            <p class="card__image">
+              <img src="brain.jpg" class="card-img-top" alt="...">  
+            </div>
           </div>
-      </main>
-  </body>
+            </div>
+        </div>
+      </div>
+      <br>
+      <br>
+ <!-- third row  -->      
+      <div class="container fbox" id="card-3">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="card">
+                <p class="card__image">
+                  <img src="health02.jpg" class="card-img-top" alt="...">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12" id="text-card-3">
+              <h4>Health diary</h4>
+              <br>
+            <h5>MemForever helps to track your blood sugar, blood pressure and weight. 
+              When you enter your health data to Memforever on a daily basis, MemForever will analyse your health based on the data you provided, this information might be very useful for you, your family, and your doctor.</h5>
+            </div>        
+                </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <br>
+       <!-- third row  -->
+      <div class="container fbox">
+              <div class="col-lg-6 col-sm-12" id="text-card-3">
+              <h4> Health Data Analysis Report</h4>
+              <br>
+            <h5>By using MemForever platform on a daily basis, you would be able see a track record for your health condition, your game score and your mood.  
+              MemForever turns this track records into graphic report so that you can understand your well-being and spot any changes.  
+              General suggestions according to your health condition is also provided to help you adjust your life style accordingly.</h5>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="card">
+                <p class="card__image">
+                  <img src="data01.jpg"  class="card-img-top"  alt="..." >
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          <br>
+          <br>
+          <!-- fourth row  -->
+          <div class="container fbox" id="card-5">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12">
+                <div class="card">
+                  <p class="card__image">
+                    <img src="todolist01.jpg" class="card-img-top" alt="...">
+                  </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-sm-12" id="text-card-3">
+                <h4>To-do list</h4>
+                <br>
+                <h5>MemForever provides a simple to use to do list platform. 
+                  You can add your daily to do tasks and once you have finished them, you can simply remove the task from the list.</h5>
+              </div>   
+              </div>
+            </div>
+        </div>
+<br>
+<br>
+<br>
+</main>
+<footer class="footer">
+<!-- Copyright -->
+<!-- ❤️  -->
+<br>
+<br>
+<div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
+<a  class="white-text"> <strong>ACQP IT</strong> </a>. 
+</div>
+<br>
+<br>
+<!-- Copyright -->
+</footer>   
+    
+    <div class="parallax"></div>
+    
+    </body>
+    </html>
+
+
+   </body>
+
      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
