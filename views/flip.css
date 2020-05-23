@@ -1,5 +1,15 @@
 /* Flicp card */
 
+#feature-comment{
+  
+margin-bottom: 3rem;
+}
+
+#flipbox-section{
+margin-top: 5rem;
+margin-bottom: 1rem;
+}
+
 .cardBox {
   float: left;
   font-size: 1.2em;
@@ -8,7 +18,8 @@
   perspective: 800px;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  width: 23.7%;
+  /* width: 23.7%; */
+  width: 23%;
 }
 
 .cardBox:hover .card {
@@ -17,13 +28,13 @@
 }
 
 .card {
-  background: #222;
+  /* background: #222; */
   cursor: default;
   height: 300px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: transform 0.4s ease 0s;
-  transition: transform 0.4s ease 0s;
+  -webkit-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
   width: 100%;
   -webkit-animation: giro 1s 1;
   animation: giro 1s 1;
@@ -81,19 +92,19 @@
 }
 
 .cardBox:nth-child(1) .card .back {
-  background: cornflowerblue;
+  background: rgb(85, 85, 83);
 }
 
 .cardBox:nth-child(2) .card .back {
-  background: orange;
+  background: rgb(85, 85, 83);
 }
 
 .cardBox:nth-child(3) .card .back {
-  background: yellowgreen;
+  background: rgb(85, 85, 83);
 }
 
 .cardBox:nth-child(4) .card .back {
-  background: tomato;
+  background: rgb(85, 85, 83);
 }
 
 .cardBox:nth-child(2) .card {

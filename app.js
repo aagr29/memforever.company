@@ -43,6 +43,10 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+//display About Us page  
+app.get('/aboutUS', function(req, res) {
+  res.render('aboutUs');
+});
 
 
 //display registration page

@@ -1,4 +1,3 @@
-
 const startButton= document.getElementById('start-btn')
 const endloop = document.getElementById('answer-buttons')
 const nextButton= document.getElementById('next-btn')
@@ -38,11 +37,12 @@ setNextQuestion();
 
 function setNextQuestion(){
     resetState()
+    shuffledQuestions[currentQuestionIndex].number = currentQuestionIndex+1;
 showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question){
-questionElement.innerText = question.question
+questionElement.innerText = question.number+". "+question.question
 question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text
@@ -69,9 +69,9 @@ function selectAnswer(e){
 const selectedButton = e.target
 const correct = selectedButton.dataset.correct
 setScore(document.body, correct)
- Array.from(answerButtonsElment.children).forEach(button=>{
-     setStatusClass(button, button.dataset.correct)
- })
+Array.from(answerButtonsElment.children).forEach(button=>{
+    setStatusClass(button, button.dataset.correct)
+})
 if(shuffledQuestions.length > currentQuestionIndex +1){
 
     nextButton.classList.remove('hide')
@@ -82,7 +82,7 @@ if(shuffledQuestions.length > currentQuestionIndex +1){
 
 function endloopMethod(){
     endloop.classList.add('hide')
-    document.getElementById('question').innerHTML="Congragulations! Game Finished."
+    document.getElementById('question').innerHTML="Congragulations! Game Finished. Your Score is <strong>"+score+"</strong> out of 8" 
     endofgamebutton.classList.remove('hide')
     process.exit(1)
 }
@@ -117,7 +117,6 @@ function setScore(element, correct){
     }
 }
 
-
 function clearStatusClass(element){
 element.classList.remove('correct')
 element.classList.remove('wrong')
@@ -142,6 +141,7 @@ $(document).ready(function(){
 
 const questions = [
     {QID: "1",
+        number: 0,
         question: "I use (below) to brush teeth",
       answers: [
           {text: 'Tooth Brush', correct: true},
@@ -150,6 +150,7 @@ const questions = [
           {text: 'tissue', correct: false},]
     },
     {QID: "2",
+    number: 0,
         question: "Apple is a",
     answers: [
         {text: 'car', correct: false},
@@ -158,6 +159,7 @@ const questions = [
         {text: 'toaster', correct: false},]
     },
     {QID: "3",
+    number: 0,
         question: "Kitchen is where I can",
     answers: [
       {text: 'withdraw money', correct: false},
@@ -166,14 +168,16 @@ const questions = [
       {text: 'cook dinner', correct: true},]
     },
     {QID: "4",
+    number: 0,
     question: "Animal name beginning with the letter S",
     answers: [
     {text: 'Tigar', correct: false},
     {text: 'Sugar', correct: false},
-    {text: 'Spider', correct: false},
+    {text: 'Spoon', correct: false},
     {text: 'Skunk', correct: true},]
     },
     {QID: "5", 
+    number: 0,
     question: "40 * 50 = ",
     answers: [
     {text: '40', correct: false},
@@ -182,6 +186,7 @@ const questions = [
     {text: '2000', correct: true},]
     },
     {QID: "6",
+    number: 0,
     question: "Which one is the largest number?",
     answers: [
     {text: '456', correct: true},
@@ -190,14 +195,16 @@ const questions = [
     {text: '340', correct: false},]
     },
     {QID: "7",
+    number: 0,
     question: "what the missing number at the end of the series. 5, 12, 19, 26,?",
     answers: [
     {text: '31', correct: false},
     {text: '32', correct: false},
-    {text: '33', correct: false},
-    {text: '34', correct: true},]
+    {text: '33', correct: true},
+    {text: '34', correct: false},]
     },
     {QID: "8",
+    number: 0,
     question: "5 + 2 = ",
     answers: [
     {text: '5', correct: false},
@@ -206,6 +213,7 @@ const questions = [
     {text: '12', correct: false},]
     },
     {QID: "9",
+    number: 0,
     question: "I go to a bank to",
     answers: [
     {text: 'Deposit money', correct: true},
@@ -214,6 +222,7 @@ const questions = [
     {text: 'cut my hair', correct: false},]
     }, 
     {QID: "10",
+    number: 0,
     question: "33 / 11 =",
     answers: [
     {text: '33', correct: false},
@@ -222,14 +231,16 @@ const questions = [
     {text: 'unknown', correct: false},]
     },
     {QID: "11",
-    question: "Fill in the missing word: An Espress Book Machine (EBM) prints and binds a high-quality copy of a book right in the store, in just a few minutes. There’s a catalogue of millions of books to choose from, including rare manuscripts and books that publishers are no longer _______",
+    number: 0,
+    question: "What to bring on a rainning day?",
     answers: [
-    {text: 'printing', correct: true},
-    {text: 'asking', correct: false},
-    {text: 'seeking', correct: false},
-    {text: 'recommending', correct: false},]
+    {text: 'umbrella', correct: true},
+    {text: 'instant noodle', correct: false},
+    {text: 'labtop', correct: false},
+    {text: 'sunscreen', correct: false},]
     },
     {QID: "12",
+    number: 0,
     question: "Which of the following is the opposite of the word dark?",
     answers: [
     {text: 'Gloomy', correct: false},
@@ -238,6 +249,7 @@ const questions = [
     {text: 'Light', correct: true},]
     },
     {QID: "13",
+    number: 0,
     question: "which number is the smallest?",
     answers: [
     {text: '67', correct: false},
@@ -246,6 +258,7 @@ const questions = [
     {text: '34', correct: false},]
     },
     {QID: "14",
+    number: 0,
     question: "Country name beginning with the letter A",
     answers: [
     {text: 'Adelaide', correct: false},
@@ -254,11 +267,21 @@ const questions = [
     {text: 'China', correct: false},]
     },
     {QID: "15",
+    number: 0,
     question: "Letter is to word as house is to",
     answers: [
     {text: 'mansion', correct: false},
     {text: 'room', correct: true},
     {text: 'hospital', correct: false},
     {text: 'homeless', correct: false},]
+    },
+    {QID: "16",
+    number: 0,
+    question: "Which one is a city?",
+    answers: [
+    {text: 'Victoria', correct: false},
+    {text: 'Queensland', correct: false},
+    {text: 'Sydney', correct: true},
+    {text: 'New South Wales', correct: false},]
     },
   ];

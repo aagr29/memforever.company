@@ -483,3 +483,29 @@ body{
 h3{
     color: rgb(160, 72, 9);
 }
+
+h2 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 25px "Lato", sans-serif;
+  color: #111;
+} 
+
+h3{
+  letter-spacing: 5px;
+  /* text-transform: uppercase; */
+  font: 21px "Helvetica";
+  color: rgb(16, 17, 17);
+  line-height: 1.5 ;
+  /* text-align: justify; */
+  
+}
+
+h5{
+  letter-spacing: 5px;
+  /* text-transform: uppercase; */
+  /* font: 18px "Lato", sans-serif; */
+  font: 18px "Helvetica";
+  color: rgb(8, 8, 8);
+  line-height: 1.5 ;
+} 

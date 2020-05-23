@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>MemForever Registration Page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="flip.css">   
+</head>
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
+          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+                    <a class="navbar-brand" href="#">MemForever</a>
+                    <!-- icon here  -->
+                     <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z" clip-rule="evenodd"/>
+                        </svg>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                        </li>
+                        </li>
+                      </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+            </header>
+            <div class="jumbotron">
+              <div class="mask rgba-black-light">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                    <div class="row d-flex justify-content-start text-start">
+                          <div class="col-lg-6">
+                          <h3 id="title" class="display-4 pt-5 mb-2"><span style="font-weight: bold; font-style: italic; color: rgb(1, 5, 12);">MemForever</span></h3> 
+                  <br>
+                  <br>
+                    <div class="row d-flex justify-content-start text-start"></div>
+                      <a class="btn btn-warning btn-lg" href="/login" role="button">Login</a>
+                      <br />
+                      <br />
+                      <h5 id="regis-text"><strong>For new user, click here to register</strong></h5>
+                      <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
+                  </div>
+              </div>
+          </div>
+            </div>
+           <!-- title section  -->
+<div style="position:relative;" id="intro">
+  <div style="color: rgb(5, 5, 5);background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;"><strong>MemForever is dedicated to help dementia patients</strong></h3>
+  </div>
+  </div>
+
+  <!-- stats section  -->
+  <div class="container fbox" id="card-2">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+        <h6><strong>Estimated number of Australians with dementia, 2018 to 2030</strong></h6>
+        <div id="chartdiv"></div>
+        <br>
+        </div>
+      <div class="col-lg-6 col-md-12 col-sm-12" >
+        <!-- HTML -->
+        <h4>Dementia Exponential Growth</h4>
+        <br>
+        <br>
+        <h5>By 2030, about 550,000 Australians are expected to have dementia, and 42% of
+            those aged 85 or older. By 2057, this number is expected to extend to about 1 million
+            Australians.</h5>
+        <h5>Australian is an aging society, dementia is an urgent issue that should not be overlooked. 
+            MemForever is a website dedicated to help dementia patients and their family. </h5>
+        </div>
+    </div>
+         </div>
+         
+          </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+
+    <style>
+        #chartdiv {
+          width: 100%;
+          height: 500px;
+        }
+        </style>
+        
+        <!-- Resources -->
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        
+        <!-- Chart code -->
+        <script>
+        am4core.ready(function() {
+        
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        var chart = am4core.create("chartdiv", am4charts.XYChart,{
+                "type": "serial",
+                "theme": "light",
+                "titles": [{
+                  "text": "My Chart Title"
+                }, {
+                  "text": "My Chart Sub-Title",
+                  "bold": false
+                }],
+        });
+        
+        //chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        
+        chart.data = [
+          {
+            country: "2018",
+            visits: 376000
+          },
+          {
+            country: "2019",
+            visits: 390076
+          },
+          {
+            country: "2020",
+            visits: 404152
+          },
+          {
+            country: '2021',
+            visits: 418228
+          },
+          {
+            country: '2022',
+            visits: 431304
+          },
+          {
+            country: '2023',
+            visits: 446380
+          },{
+            country: "2024",
+            visits: 460456
+          },
+          {
+            country: '2025',
+            visits: 474532
+          },
+          {
+            country: '2026',
+            visits: 488608
+          },
+          {
+            country: '2027',
+            visits: 502684
+          },
+          {
+            country: '2028',
+            visits: 516760
+          },
+          {
+            country: '2029',
+            visits: 530900
+          },
+          {
+            country: '2030',
+            visits: 550000
+          },
+    
+        ];
+        
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.dataFields.category = "country";
+        categoryAxis.renderer.minGridDistance = 40;
+        categoryAxis.fontSize = 11;
+        
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.min = 0;
+        valueAxis.max = 600000;
+        valueAxis.strictMinMax = true;
+        valueAxis.renderer.minGridDistance = 30;
+        
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.dataFields.categoryX = "country";
+        series.dataFields.valueY = "visits";
+        series.columns.template.tooltipText = "{valueY.value}";
+        series.columns.template.tooltipY = 0;
+        series.columns.template.strokeOpacity = 0;
+        
+        // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+        series.columns.template.adapter.add("fill", function(fill, target) {
+          return chart.colors.getIndex(target.dataItem.index);
+        });
+        
+        }); // end am4core.ready()
+        </script>
+        
+   
