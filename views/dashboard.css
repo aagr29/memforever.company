@@ -82,3 +82,33 @@ body{
     color: rgb(39, 52, 231);
     text-align: center;
 }
+
+#tab-sidebar .nav-link {
+    margin: 10px;
+    border: 1px solid lightgray;
+    width: 200px;
+    height: 50px;
+    /* This is just to center text in pills */
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: #5ebd6c;
+    color: white;
+}
+
+#tab-sidebar .nav-link.active {
+    background-color: #b4d558;
+    color: black;
+}
+
+#tab-sidebar .nav-link.col-12 {
+    max-width: calc(100% - 10px);
+}
+
+.tab-content > div {
+    margin-bottom: 50px;
+}
+
+.nav {
+    display: block;
+}

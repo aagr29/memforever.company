@@ -85,146 +85,120 @@
         <!-- END OF JUMBOTRON IMAGE        -->
         <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
             <!-- start of bmi section -->
-            <section id="bmianalysis">
-                <br>
-                <br>
-                <br>
-                <H3>welcome to your BMI analysis.</H3>
-                <br>
-                <h5>The below graph shows your bmi vs dates </h5>
 
-                <div class="bmi-container">
 
-                    <div id="bmiall-chart-container">
-                        <!-- code for bmi graph display -->
+            <div class="container">
+                <div class="row">
+                    <div id="tab-sidebar" class="col-3 nav nav-pills" role="tablist" aria-orientation="vertical">
+                        <a id="pill-A" class="nav-link col-12 active" data-toggle="pill" href="#tab-bmi" role="tab"
+                            aria-controls="tab-A" aria-selected="true">BMI</a>
+                        <a id="pill-B" class="nav-link col-12" data-toggle="pill" href="#tab-mood" role="tab"
+                            aria-controls="tab-B" aria-selected="false">Mood</a>
+                        <a id="pill-C" class="nav-link col-12" data-toggle="pill" href="#tab-game" role="tab"
+                            aria-controls="tab-C" aria-selected="false">Game</a>
+                        <a id="pill-D" class="nav-link col-12" data-toggle="pill" href="#tab-health" role="tab"
+                            aria-controls="tab-D" aria-selected="false">Health</a>
                     </div>
 
-                    <div class="bmi-info">
-                        <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
-                        <div class="bmi-info">
-                            <div class="bmi-suggestive-message">
+                    <div id="tab-content" class="col-9 tab-content">
+                        <div id="tab-bmi" class="tab-pane fade show active" role="tabpanel" aria-labelledby="pill-A">
+                            <section id="bmianalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your BMI analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your bmi vs dates </h5>
 
-                            </div>
+                                <div class="bmi-container">
+
+                                    <div id="bmiall-chart-container">
+                                        <!-- code for bmi graph display -->
+                                    </div>
+
+                                    <div class="bmi-info">
+                                        <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
+                                        <div class="bmi-info">
+                                            <div class="bmi-suggestive-message">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                            </section>
+                            <!-- end of bmi section -->
+                        </div>
+                        <div id="tab-mood" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-B">
+                            <section id="moodanalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your mood analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your mood score vs dates </h5>
+                                <div class='mood-container'>
+                                    <div id="mood-chart-container"></div>
+                                    <br>
+                                    <br>
+                                    <div class="mood-avg-info">
+                                        <div class="mood-avg">your average mood score : <span class="mood-avg-val">
+
+                                            </span>
+                                        </div>
+                                        <div class="mood-suggestive-message">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </section>
+                        </div>
+                        <div id="tab-game" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-C">
+                            <section id="scoreanalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your game analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your game score vs dates </h5>
+                                <div class="mood-container">
+                                    <div id='score-chart-container'></div>
+                                </div>
+
+                                <div class="gs-info">
+                                    <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
+                                </div>
+                            </section>
+                        </div>
+                        <div id="tab-health" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-D">
+                            <section id="healthanalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your health analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your blood pressure and blood sugar</h5>
+                                <div class='mood-container'>
+                                    <div id="bp-chart-container"></div>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <h5>The below graph shows your daily weight</h5>
+
+                                <div class='mood-container'>
+                                    <!-- weight chart -->
+                                    <div id="chart-container"></div>
+                                </div>
+                            </section>
                         </div>
                     </div>
-                    <br>
-                    <br>
-            </section>
-            <!-- end of bmi section -->
+                </div>
+            </div>
 
         </div>
-        <!--         mood analysis -->
-        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-            <section id="moodanalysis">
-                <br>
-                <br>
-                <br>
-                <H3>welcome to your mood analysis.</H3>
-                <br>
-                <h5>The below graph shows your mood score vs dates </h5>
-                <div class='mood-container'>
-                    <div id="mood-chart-container"></div>
-                    <br>
-                    <br>
-                    <div class="mood-avg-info">
-                        <div class="mood-avg">your average mood score : <span class="mood-avg-val">
-
-                            </span>
-                        </div>
-                        <div class="mood-suggestive-message">
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </section>
-            <!-- end of mood section -->
-        </div>
-        <!-- start of game section -->
-
-        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-
-            <section id="scoreanalysis">
-                <br>
-                <br>
-                <br>
-                <H3>welcome to your game analysis.</H3>
-                <br>
-                <h5>The below graph shows your game score vs dates </h5>
-                <div class="mood-container">
-                    <div id='score-chart-container'></div>
-                </div>
-
-                <div class="gs-info">
-                    <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
-                </div>
-            </section>
-        </div>
-        <!-- end of game section -->
-
-        <!-- start of health section -->
-        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-            <section id="healthanalysis">
-                <br>
-                <br>
-                <br>
-                <H3>welcome to your health analysis.</H3>
-                <br>
-                <h5>The below graph shows your blood pressure and blood sugar</h5>
-                <div class='mood-container'>
-                    <div id="bp-chart-container"></div>
-                </div>
-                <br>
-                <br>
-                <br>
-                <h5>The below graph shows your daily weight</h5>
-
-                <div class='mood-container'>
-                    <!-- weight chart -->
-                    <div id="chart-container"></div>
-                </div>
-            </section>
-        </div>
-        <!-- end of health analysis -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        
-
 
     </main>
     <!-- Jquery JS-->
@@ -250,12 +224,21 @@
                 var bmi = parseFloat((weight / (height * height)) * 10000).toFixed(2);
                 var bmi_con = parseFloat(bmi)
 
-                if (bmi_con > 25) {
+                if (bmi_con < 18) {
 
-                    $('.bmi-suggestive-message').html("not good");
+                    $('.bmi-suggestive-message').html("Your underweight, you try to reach a bmi of 20");
 
-                } else {
-                    $('.bmi-suggestive-message').html("good");
+                } else if (bmi_con >= 18 && bmi_con <= 25) {
+                    $('.bmi-suggestive-message').html("good, keep going")
+                }
+                else if (bmi_con >= 25 && bmi_con <= 30) {
+                    $('.bmi-suggestive-message').html("overweight, try to to reach a bmi of 25")
+                }
+                else if (bmi_con >= 30 && bmi_con <= 40) {
+                    $('.bmi-suggestive-message').html("obese, try to to reach a bmi of 25")
+                }
+                else {
+                    $('.bmi-suggestive-message').html("you need professional abvice")
                 }
                 console.log("BMI:" + bmi);
                 $(".bmi-val").html(bmi);
@@ -339,13 +322,13 @@
                         data: mood_data["avg_mood"]
                     }, {
                         name: 'You should be here',
-                        data: mood_data["upper_limit"]
+                        data: mood_data["upper_limit"], visible: false
                     }, {
                         name: 'You should not be here',
-                        data: mood_data["lower_limit"]
+                        data: mood_data["lower_limit"], visible: false
                     }, {
                         name: 'You are in danger zone',
-                        data: mood_data["llm"]
+                        data: mood_data["llm"], visible: false
                     }]
                 });
 
@@ -432,24 +415,28 @@
                                 },
 
 
+
+
                                 series: [{
                                     name: 'BMI',
-                                    data: bmi_data["bmi"]
+                                    data: bmi_data["bmi"],
+
                                 }, {
                                     name: 'Below this your underweight',
-                                    data: bmi_data["bmi lower"]
+                                    data: bmi_data["bmi lower"],
+                                    visible: false
                                 }, {
                                     name: 'above this you are overweight',
-                                    data: bmi_data["bmi normal"]
+                                    data: bmi_data["bmi normal"], visible: false
                                 }, {
                                     name: 'above this you are obese',
-                                    data: bmi_data["bmi over"]
+                                    data: bmi_data["bmi over"], visible: false
                                 }, {
                                     name: 'above this you are obese type 1',
-                                    data: bmi_data["bmi_obese"]
+                                    data: bmi_data["bmi_obese"], visible: false
                                 }, {
                                     name: 'above this you are obese type 2',
-                                    data: bmi_data["bmi_obese1"]
+                                    data: bmi_data["bmi_obese1"], visible: false
                                 }],
                             });
                         });
