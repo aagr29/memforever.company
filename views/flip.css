@@ -1,67 +1,134 @@
-/* for demo purposes */
-/* body {
-    background: grey;
-  } */
-  
-  .card-block .btn-outline-primary {
-    width: 100%;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-  }
+/* Flicp card */
 
-  
-  
-  .card {
-    margin: 20px 0;
-  }
-  
-  /* Flip Cards CSS */
-  .card-container {
-    perspective: 700px;
-  }
-  .card-flip {
-    position: relative;
-    width: 100%;
-    transform-style: preserve-3d;
-    height: auto;
-    transition: all 0.5s ease-out;
-    background: white;
-    border: none;
-  }
-  
-  .card-flip div {
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    height: 100%;
-    width: 100%;
-    border: none;
-  }
-  
-  .card-flip .front {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .card-flip .back {
-    position: relative;
-    z-index: 2;
-    transform: rotateY(-180deg);
-    
-  }
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
 
-   .card-flip .back img{
-    width: 100%;
-    
-    
-    top: 0;
-    left: 0;
-    position: absolute;
-  }  
-  
-  .card-container:hover .card-flip {
-    transform: rotateY(180deg);
+.cardBox:hover .card {
+  -webkit-transform: rotateY( 180deg);
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: #222;
+  cursor: default;
+  height: 300px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: transform 0.4s ease 0s;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .front strong {
+  /* background: #fff; */
+  border-radius: 100%;
+  /* color: #222; */
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  -webkit-transform: rotateY( 180deg);
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: cornflowerblue;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: yellowgreen;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: tomato;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
   }
-  
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+
+
+
