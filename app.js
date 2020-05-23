@@ -477,3 +477,45 @@ app.get('/get_all_score', function(req, res) {
     console.log(error);
   })
 })
+//get average game score
+app.get('/get_avg_score', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,AVG(game_score) AS game_avg FROM game_records WHERE userid = $1 GROUP BY userid',[userId])
+    .then((result) => {
+      res.status(200).json({'result': result[0]})
+  }).catch(error => {
+    console.log(error);
+  })
+})
+
+app.get('/get_latest_bs', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,blood_sugar FROM health_records WHERE userid = $1 ORDER BY health_id DESC LIMIT 1',[userId])
+    .then((result) => {
+      res.status(200).json({'result': result[0]})
+  }).catch(error => {
+    console.log(error);
+  })
+})
+app.get('/get_latest_bp_up', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,bp_up FROM health_records WHERE userid = $1 ORDER BY health_id DESC LIMIT 1',[userId])
+    .then((result) => {
+      res.status(200).json({'result': result[0]})
+  }).catch(error => {
+    console.log(error);
+  })
+})
+app.get('/get_latest_bp_low', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,bp_low FROM health_records WHERE userid = $1 ORDER BY health_id DESC LIMIT 1',[userId])
+    .then((result) => {
+      res.status(200).json({'result': result[0]})
+  }).catch(error => {
+    console.log(error);
+  })
+})

@@ -16,7 +16,8 @@
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
 
     <!-- Vendor CSS-->
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
@@ -24,108 +25,218 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- Main CSS-->
     <link href="bmi.css" rel="stylesheet" media="all">
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="bmi.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bmi.css">
 </head>
+<!-- end of head -->
+
 <body>
+    <!-- floating nav bar     -->
     <header>
-       
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <a class="navbar-brand" href="#">MemForever</a>
-                <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z" clip-rule="evenodd"/>
-                  </svg>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#">MemForever</a>
+            <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z"
+                    clip-rule="evenodd" />
+            </svg>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
                     </li>
-                
+
                     <li class="nav-item">
-                      <a class="nav-link" href="/healthinfo">Health</a>
+                        <a class="nav-link" href="/healthinfo">Health</a>
                     </li>
-     
-                        <li class="nav-item">
-                          <a class="nav-link" href="/game">Game</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="/todolist">To-do list</a>
-                        </li>
-                      <li class="nav-item">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/game">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/todolist">To-do list</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href='/bmi'>Your Progress</a>
-                      </li>
-                      
-                </li>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
                     </li>
-                    </li>
-                  </li>
-                  </ul>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/logout"><strong>LOG OUT</strong></a>
-                  </li>
-                </div>
-              </nav>
-          </header>
 
-    
+                    </li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                            </li>
+                            </li>
+                            </li>
+                        </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout"><strong>LOG OUT</strong></a>
+                        </li>
+                    </div>
+        </nav>
+
+        <!-- end of floating nav bar     -->
+    </header>
+    <!-- end of header -->
+
     <main>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2 id="title">Here is your record</h2>
-        <br>
-        <br>
-        <br>
-    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
-        <div class="bmi-container">
-            <div id="chart-container"></div>
-            
-            <div class="bmi-info">
-                <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
+        <!-- START OF JUMBOTRON -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="d-flex p-2">
+                <div class="col-md-6">
+                    <div class="row d-flex justify-content-center text-center">
+                        <h3 id="title" class="display-4 pt-5 mb-2"> <span
+                                style="font-weight: bold; font-style: italic; color: rgb(214, 131, 7);">Your
+                                Analysis</span>
+                        </h3>
+                    </div>
+                </div>
             </div>
-            <br>
-            <br>
-            <div class="gs-info">
-                <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
-            </div>
-            <br>
-            <br>
-            <div class="mood-avg-info">
-                <div class="mood-avg">your average mood score : <span class="mood-avg-val"></span></div>
-                <div class="mood-suggestive-message"></div>
+        </div>
+        <!-- END OF JUMBOTRON IMAGE        -->
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <!-- start of bmi section -->
+
+
+            <div class="container">
+                <div class="row">
+                    <div id="tab-sidebar" class="col-3 nav nav-pills" role="tablist" aria-orientation="vertical">
+                        <a id="pill-A" class="nav-link col-12 active" data-toggle="pill" href="#tab-bmi" role="tab"
+                            aria-controls="tab-A" aria-selected="true">BMI</a>
+                        <a id="pill-B" class="nav-link col-12" data-toggle="pill" href="#tab-mood" role="tab"
+                            aria-controls="tab-B" aria-selected="false">Mood</a>
+                        <a id="pill-C" class="nav-link col-12" data-toggle="pill" href="#tab-game" role="tab"
+                            aria-controls="tab-C" aria-selected="false">Game</a>
+                        <a id="pill-D" class="nav-link col-12" data-toggle="pill" href="#tab-health" role="tab"
+                            aria-controls="tab-D" aria-selected="false">Health</a>
+                    </div>
+
+                    <div id="tab-content" class="col-9 tab-content">
+                        <div id="tab-bmi" class="tab-pane fade show active" role="tabpanel" aria-labelledby="pill-A">
+                            <section id="bmianalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your BMI analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your bmi vs dates </h5>
+
+                                <div class="bmi-container">
+
+                                    <div id="bmiall-chart-container">
+                                        <!-- code for bmi graph display -->
+                                    </div>
+
+                                    <div class="bmi-info">
+                                        <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
+                                        <div class="bmi-info">
+                                            <div class="bmi-suggestive-message">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                            </section>
+                            <!-- end of bmi section -->
+                        </div>
+                        <div id="tab-mood" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-B">
+                            <section id="moodanalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your mood analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your mood score vs dates </h5>
+                                <div class='mood-container'>
+                                    <div id="mood-chart-container"></div>
+                                    <div class="mood-avg-info">
+                                        <div class="mood-avg">your average mood score : <span
+                                                class="mood-avg-val"></span></div>
+                                        <div class="mood-suggestive-message"></div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                            </section>
+                        </div>
+                        <div id="tab-game" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-C">
+                            <section id="scoreanalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your game analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your game score vs dates </h5>
+                                <div class="mood-container">
+                                    <div id='score-chart-container'></div>
+                                    <div class="mood-avg-info">
+                                        <div class="game-avg">your average game score : <span
+                                                class="game-avg-val"></span></div>
+                                        <div class="game-suggestive-message"></div>
+                                    </div>
+                                </div>
+                                <div class="gs-info">
+                                    <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
+                                </div>
+                                <br>
+                                <br>
+                            </section>
+                        </div>
+                        <div id="tab-health" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-D">
+                            <section id="healthanalysis">
+                                <br>
+                                <br>
+                                <br>
+                                <H3>welcome to your health analysis.</H3>
+                                <br>
+                                <h5>The below graph shows your blood pressure and blood sugar</h5>
+                                <div class='mood-container'>
+                                    <div id="bp-chart-container"></div>
+                                    <div class="mood-avg-info">
+                                        <div class="gs">your lastest blood sugar entry : <span class="bs-val"></span>
+                                        
+                                        </div>
+                                        <br>
+                                        <div class="bs-suggestive-message"></div>
+
+                                        <div class="gs">your lastest blood pressure lower entry : <span
+                                                class="bpl-val"></span></div>
+                                        <div class="bpl-suggestive-message"></div>
+                                        <br>
+                                        <div class="gs">your lastest blood pressure upper entry : <span
+                                                class="bpu-val"></span></div>
+                                        <br>
+                                        <div class="bpu-suggestive-message"></div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h5>The below graph shows your daily weight</h5>
+
+                                    <div class='mood-container'>
+                                        <!-- weight chart -->
+                                        <div id="chart-container"></div>
+                                    </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-    
         </div>
-        
-    </div>
-    <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo"></div>
-        <div class='mood-container'>
-            <div id="mood-chart-container"></div>
-        </div>
-        <div class='mood-container'>
-            <div id="bp-chart-container"></div>
-        </div>
-        <div class='mood-container'>
-            <div id="bmiall-chart-container"></div>
-        </div>
-        
-    </div>
 
-  
-</main>
+    </main>
     <!-- Jquery JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Vendor JS-->
@@ -133,46 +244,126 @@
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function() {
-            $.get("/get_latest_bmi", function(result) {
+        $(document).ready(function () {
+            $.get("/get_latest_bmi", function (result) {
                 var height = parseFloat(result.result['height']);
                 var weight = parseFloat(result.result['weight']);
 
-                var bmi = parseFloat((weight/(height*height)) * 10000).toFixed(2);
+                var bmi = parseFloat((weight / (height * height)) * 10000).toFixed(2);
+                var bmi_con = parseFloat(bmi)
 
+                if (bmi_con < 18) {
+
+                    $('.bmi-suggestive-message').html("Your underweight, you try to reach a bmi of 20");
+
+                } else if (bmi_con >= 18 && bmi_con <= 25) {
+                    $('.bmi-suggestive-message').html("good, keep going")
+                }
+                else if (bmi_con >= 25 && bmi_con <= 30) {
+                    $('.bmi-suggestive-message').html("overweight, try to to reach a bmi of 25")
+                }
+                else if (bmi_con >= 30 && bmi_con <= 40) {
+                    $('.bmi-suggestive-message').html("obese, try to to reach a bmi of 25")
+                }
+                else {
+                    $('.bmi-suggestive-message').html("you need professional abvice")
+                }
                 console.log("BMI:" + bmi);
                 $(".bmi-val").html(bmi);
             });
 
-            $.get("/get_latest_gscore", function(result) {
-                var gs = parseFloat(result.result['game_score']);
-                
+            $.get("/get_latest_bs", function (result) {
+                var bs = parseFloat(result.result['blood_sugar']);
+                var bs_m = parseFloat(bs)
 
-                
+                if (bs_m <= 180 && bs_m >= 70) {
+                    $('.bs-suggestive-message').html("Your blood sugar is normal");
+                }
+                else {
+                    $('.bs-suggestive-message').html("you need professional abvice")
+                }
+
+                $(".bs-val").html(bs);
+            });
+            $.get("/get_latest_bp_low", function (result) {
+                var bp_low = parseFloat(result.result['bp_low']);
+                var bp_lowm = parseFloat(bp_low)
+
+                if (bp_lowm <= 80 && bp_lowm >= 60) {
+                    $('.bpl-suggestive-message').html("Your blood pressure lower level is normal");
+                }
+                else {
+                    $('.bpl-suggestive-message').html("you need professional abvice")
+                }
+
+                $(".bpl-val").html(bp_low);
+            });
+
+            $.get("/get_latest_bp_up", function (result) {
+                var bp_up = parseFloat(result.result['bp_up']);
+                var bp_upm = parseFloat(bp_up)
+
+                if (bp_upm <= 90 && bp_upm >= 130) {
+                    $('.bpu-suggestive-message').html("Your blood pressure upper level is normal");
+                }
+                else {
+                    $('.bpu-suggestive-message').html("you need professional abvice")
+                }
+
+                $(".bpu-val").html(bp_up);
+            });
+
+            $.get("/get_latest_gscore", function (result) {
+                var gs = parseFloat(result.result['game_score']);
+
+
+
 
                 console.log("game_score:" + gs);
                 $(".gs-val").html(gs);
             });
 
-            $.get("/get_avg_mood", function(result) {
+            $.get("/get_avg_mood", function (result) {
                 var mood_avg = parseFloat(result.result['mood_avg']);
-                var mood_avg_str=mood_avg.toFixed(2);
-                if (mood_avg>0){
-                    
+                var mood_avg_str = mood_avg.toFixed(2);
+                if (mood_avg > 0) {
+
                     $('.mood-suggestive-message').html("keep going");
 
-                }else{
-                    $('.mood-suggestive-message').html("This is not looking good");
-                }   
-                
+                } else {
+                    $('.mood-suggestive-message').html("This is not looking good to need work on your mood");
+                }
+
 
                 console.log("mood_avg:" + mood_avg_str);
                 $(".mood-avg-val").html(mood_avg_str);
             });
 
-            $.get("/get_bmi", function(result) {
+            $.get("/get_avg_score", function (result) {
+                var game_avg = parseFloat(result.result['game_avg']);
+                var game_avg_str = game_avg.toFixed(2);
+                if (game_avg > 4) {
+
+                    $('.game-suggestive-message').html("keep going");
+
+                } else {
+                    $('.game-suggestive-message').html("This is not looking good to need work on your cognition skills");
+                }
+
+
+                console.log("game_avg:" + game_avg_str);
+                $(".game-avg-val").html(game_avg_str);
+            });
+
+            $.get("/get_bmi", function (result) {
                 var bmi_data = result;
 
                 console.log(bmi_data["weights"]);
@@ -183,22 +374,23 @@
                         marginBottom: 100
                     },
                     title: {
-                            text: 'Weight Analysis'},
+                        text: 'Weight Analysis'
+                    },
                     xAxis: {
                         categories: bmi_data["dates"],
                         labels: {
-                        rotation: 90
+                            // rotation: 90
                         }
                     },
 
                     series: [{
                         name: "Weights",
-                        data: bmi_data["weights"]        
+                        data: bmi_data["weights"]
                     }]
                 });
             });
 
-            $.get("/get_all_mood", function(result) {
+            $.get("/get_all_mood", function (result) {
                 var mood_data = result;
 
                 console.log(mood_data["avg_mood"]);
@@ -211,117 +403,154 @@
                     xAxis: {
                         categories: mood_data["dates"],
                         labels: {
-                        rotation: 90
+                            // rotation: 90
                         }
                     },
                     title: {
-                            text: 'Mood score analysis'},
+                        text: 'Mood score analysis'
+                    },
 
                     series: [{
                         name: "mood score",
-                        data: mood_data["avg_mood"]        
-                    },{
-                    name: 'You should be here',
-                 data: mood_data["upper_limit"]
-                },{
-                 name: 'You should not be here',
-                data: mood_data["lower_limit"]
-                 },{
-             name: 'You are in danger zone',
-                data: mood_data["llm"]
-            }]
+                        data: mood_data["avg_mood"]
+                    }, {
+                        name: 'You should be here',
+                        data: mood_data["upper_limit"], visible: false
+                    }, {
+                        name: 'You should not be here',
+                        data: mood_data["lower_limit"], visible: false
+                    }, {
+                        name: 'You are in danger zone',
+                        data: mood_data["llm"], visible: false
+                    }]
                 });
-            
-            $.get("/get_blood_pressure", function(result) {
-                var data_health = result;
 
-                console.log(data_health["bp_up"]);
+                $.get("/get_blood_pressure", function (result) {
+                    var data_health = result;
 
-                var chart = new Highcharts.Chart({
-                    chart: {
-                        renderTo: 'bp-chart-container',
-                        marginBottom: 100
-                    },
-                    xAxis: {
-                        categories: data_health["dates"],
-                        labels: {
-                        rotation: 90
-                        }
-                    },
-                    title: {
-                            text: 'Blood pressure and blood sugar analysis'},
+                    console.log(data_health["bp_up"]);
 
-                                                                                            
+                    var chart = new Highcharts.Chart({
+                        chart: {
+                            renderTo: 'bp-chart-container',
+                            marginBottom: 100
+                        },
+                        xAxis: {
+                            categories: data_health["dates"],
+                            labels: {
+                                // rotation: 90
+                            }
+                        },
+                        title: {
+                            text: 'Blood pressure and blood sugar analysis'
+                        },
+
+
                         series: [{
-                                 name: 'blood sugar',
-                                 data: data_health["blood_sugar"]
-                                }, 
+                            name: 'blood sugar',
+                            data: data_health["blood_sugar"]
+                        },
+                        {
+                            name: 'blood pressure upper limit',
+                            data: data_health["bp_up"]
+                        },
+                        {
+                            name: 'blood pressure lower limit',
+                            data: data_health["bp_low"]
+                        }],
+                    });
+                    $.get("/get_all_score", function (result) {
+                        var data_score = result;
+
+
+
+                        var chart = new Highcharts.Chart({
+                            chart: {
+                                renderTo: 'score-chart-container',
+                                marginBottom: 100
+                            },
+                            xAxis: {
+                                categories: data_score["dates"],
+                                labels: {
+                                    // rotation: 90
+                                }
+                            },
+                            title: {
+                                text: 'Game score analysis'
+                            },
+
+
+                            series: [
+
                                 {
-                                name: 'blood pressure upper limit',
-                                data: data_health["bp_up"]
-                                }, 
-                                {
-                                name: 'blood pressure lower limit',
-                                 data: data_health["bp_low"]
+                                    name: 'game score',
+                                    data: data_score["avg_game"]
                                 }],
-    });
-    $.get("/get_bmi_all", function(result) {
-                var bmi_data = result;
+                        });
+                        $.get("/get_bmi_all", function (result) {
+                            var bmi_data = result;
 
-                
 
-                var chart = new Highcharts.Chart({
-                    chart: {
-                        renderTo: 'bmiall-chart-container',
-                        marginBottom: 100
-                    },
-                    xAxis: {
-                        categories: bmi_data["dates"],
-                        labels: {
-                        rotation: 90
-                        }
-                    },
-                    title: {
-                            text: 'BMI Analysis'},
 
-                                                                                            
-                        series: [{
-                                                                            name: 'BMI',
-                                                                            data: bmi_data["bmi"]
-                                                                        }, {
-                                                                            name: 'Below this your underweight',
-                                                                            data: bmi_data["bmi lower"]
-                                                                        }, {
-                                                                            name: 'above this you are overweight',
-                                                                            data: bmi_data["bmi normal"]
-                                                                        },{
-                                                                            name: 'above this you are obese',
-                                                                            data: bmi_data["bmi over"]
-                                                                        },{
-                                                                            name: 'above this you are obese type 1',
-                                                                            data: bmi_data["bmi_obese"]
-                                                                        },{
-                                                                            name: 'above this you are obese type 2',
-                                                                            data: bmi_data["bmi_obese1"]
-                                                                        }],
-    });
-});
-});
-});
+                            var chart = new Highcharts.Chart({
+                                chart: {
+                                    renderTo: 'bmiall-chart-container',
+                                    marginBottom: 100
+                                },
+                                xAxis: {
+                                    categories: bmi_data["dates"],
+                                    labels: {
+                                        // rotation: 90
+                                    }
+                                },
+                                title: {
+                                    text: 'BMI Analysis'
+                                },
+
+
+
+
+                                series: [{
+                                    name: 'BMI',
+                                    data: bmi_data["bmi"],
+
+                                }, {
+                                    name: 'Below this your underweight',
+                                    data: bmi_data["bmi lower"],
+                                    visible: false
+                                }, {
+                                    name: 'above this you are overweight',
+                                    data: bmi_data["bmi normal"], visible: false
+                                }, {
+                                    name: 'above this you are obese',
+                                    data: bmi_data["bmi over"], visible: false
+                                }, {
+                                    name: 'above this you are obese type 1',
+                                    data: bmi_data["bmi_obese"], visible: false
+                                }, {
+                                    name: 'above this you are obese type 2',
+                                    data: bmi_data["bmi_obese1"], visible: false
+                                }],
+                            });
+                        });
+                    });
+                });
+            });
         });
     </script>
-    
-<footer class="footer">
-    <!-- Copyright -->
-    <!-- ❤️  -->
-    <br>
-    <br>
-    <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
-      <a  class="white-text"> <strong>ACQP IT</strong> </a>. 
-    </div>
-    <br>
-    <br>
-    <!-- Copyright -->
-  </footer>
+
+    <footer class="footer">
+        <!-- Copyright -->
+        <!-- ❤️  -->
+        <br>
+        <br>
+        <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
+            <a class="white-text"> <strong>ACQP IT</strong> </a>.
+        </div>
+        <br>
+        <br>
+        <!-- Copyright -->
+    </footer>
+
 </html>
 <!-- end document-->

@@ -4,48 +4,66 @@ html {
     }
     
 body{
-    margin-bottom: 120px;
+    margin-bottom: 100px;
+    background-image: linear-gradient(to right, #c7f8d6 0%, #eba79b 100%);
 }
 
-/* .bmi-container {
+.jumbotron{
+
+    /* background-size: 100% 100%; */
+    background-image: url("frontpage01.jpeg");
+    /* height: 100%;
+    background-size: cover;   
+    background-position: center;
+    position: relative;  */
+  
+    background-size: cover;
+    background-position: top center;
+    height: 100%;
+    width:100%;
+    
+  
+  }  
+
+.bmi-container {
     width: 980px;
     margin: 0 auto;
-    background-color: rgb(253, 253, 253);
-} */
+    background-color:#5ebd6c;
+}
 .mood-container {
     width: 980px;
     margin: 0 auto;
-    background-color: rgb(154, 231, 81);
+    background-color:#5ebd6c;
 }
 
 .bmi{
     width: 980px;
     margin: 0 auto;
-    background-color: rgb(164, 236, 82);
+    background-color:#5ebd6c;
 
 }
 
 .gs-info{
     width: 980px;
     margin: 0 auto;
-    background-color: rgb(59, 221, 250);
+    background-color:#5ebd6c;
 }
 
 #mood-chart-container{
 
-    background-color: darksalmon;
+    background-color:#5ebd6c;
 }
 
 #bp-chart-container{
 
-    background-color: gold;
+    background-color:#5ebd6c;
 }
 
 .mood-avg-info{
 
     width: 980px;
     margin: 0 auto;
-    background-color: rgb(250, 162, 203);
+    background-color: #5ebd6c;
 }
 
 .footer {
@@ -63,4 +81,34 @@ body{
     font-family: Tahoma;
     color: rgb(39, 52, 231);
     text-align: center;
+}
+
+#tab-sidebar .nav-link {
+    margin: 10px;
+    border: 1px solid lightgray;
+    width: 200px;
+    height: 50px;
+    /* This is just to center text in pills */
+    display: block;
+    align-items: center;
+    text-align: center;
+    background-color: #5ebd6c;
+    color: white;
+}
+
+#tab-sidebar .nav-link.active {
+    background-color: #b4d558;
+    color: black;
+}
+
+#tab-sidebar .nav-link.col-12 {
+    max-width: calc(100% - 10px);
+}
+
+.tab-content > div {
+    margin-bottom: 50px;
+}
+
+.nav {
+    display: block;
 }
