@@ -33,11 +33,13 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="dashboard.css">
 </head>
+<!-- end of head -->
 
 <body>
+    <!-- floating nav bar     -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="/home">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,68 +48,182 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#bmianalysis">BMI <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#bmianalysis">BMI</a>
+                        <a class="nav-link" href="#moodanalysis">Mood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scoreanalysis">Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#healthanalysis">Health</a>
                     </li>
                 </ul>
 
             </div>
         </nav>
 
-
+        <!-- end of floating nav bar     -->
     </header>
-
+    <!-- end of header -->
 
     <main>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h2 id="title">Here is your record</h2>
-        <br>
-        <br>
-        <br>
-
+        <!-- START OF JUMBOTRON -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="d-flex p-2">
+                <div class="col-md-6">
+                    <div class="row d-flex justify-content-center text-center">
+                        <h3 id="title" class="display-4 pt-5 mb-2"> <span
+                                style="font-weight: bold; font-style: italic; color: rgb(214, 131, 7);">Your
+                                Analysis</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF JUMBOTRON IMAGE        -->
         <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <!-- start of bmi section -->
             <section id="bmianalysis">
+                <br>
+                <br>
+                <br>
+                <H3>welcome to your BMI analysis.</H3>
+                <br>
+                <h5>The below graph shows your bmi vs dates </h5>
+
                 <div class="bmi-container">
-                    <div id="chart-container"></div>
+
+                    <div id="bmiall-chart-container">
+                        <!-- code for bmi graph display -->
+                    </div>
 
                     <div class="bmi-info">
                         <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
+                        <div class="bmi-info">
+                            <div class="bmi-suggestive-message">
+
+                            </div>
+                        </div>
                     </div>
                     <br>
                     <br>
-                    <div class="gs-info">
-                        <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
-                    </div>
+            </section>
+            <!-- end of bmi section -->
+
+        </div>
+        <!--         mood analysis -->
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <section id="moodanalysis">
+                <br>
+                <br>
+                <br>
+                <H3>welcome to your mood analysis.</H3>
+                <br>
+                <h5>The below graph shows your mood score vs dates </h5>
+                <div class='mood-container'>
+                    <div id="mood-chart-container"></div>
                     <br>
                     <br>
                     <div class="mood-avg-info">
-                        <div class="mood-avg">your average mood score : <span class="mood-avg-val"></span></div>
-                        <div class="mood-suggestive-message"></div>
+                        <div class="mood-avg">your average mood score : <span class="mood-avg-val">
+
+                            </span>
+                        </div>
+                        <div class="mood-suggestive-message">
+
+                        </div>
                     </div>
-
-
                 </div>
-            </section>    
 
-        </div>
 
-        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo"></div>
-        <div class='mood-container'>
-            <div id="mood-chart-container"></div>
+            </section>
+            <!-- end of mood section -->
         </div>
-        <div class='mood-container'>
-            <div id="bp-chart-container"></div>
-        </div>
-        <div class='mood-container'>
-            <div id="bmiall-chart-container"></div>
-        </div>
+        <!-- start of game section -->
 
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+
+            <section id="scoreanalysis">
+                <br>
+                <br>
+                <br>
+                <H3>welcome to your game analysis.</H3>
+                <br>
+                <h5>The below graph shows your game score vs dates </h5>
+                <div class="mood-container">
+                    <div id='score-chart-container'></div>
+                </div>
+
+                <div class="gs-info">
+                    <div class="gs">YOUR latest game score : <span class="gs-val"></span></div>
+                </div>
+            </section>
         </div>
+        <!-- end of game section -->
+
+        <!-- start of health section -->
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <section id="healthanalysis">
+                <br>
+                <br>
+                <br>
+                <H3>welcome to your health analysis.</H3>
+                <br>
+                <h5>The below graph shows your blood pressure and blood sugar</h5>
+                <div class='mood-container'>
+                    <div id="bp-chart-container"></div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <h5>The below graph shows your daily weight</h5>
+
+                <div class='mood-container'>
+                    <!-- weight chart -->
+                    <div id="chart-container"></div>
+                </div>
+            </section>
+        </div>
+        <!-- end of health analysis -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
 
 
     </main>
@@ -118,6 +234,12 @@
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function () {
@@ -126,7 +248,15 @@
                 var weight = parseFloat(result.result['weight']);
 
                 var bmi = parseFloat((weight / (height * height)) * 10000).toFixed(2);
+                var bmi_con = parseFloat(bmi)
 
+                if (bmi_con > 25) {
+
+                    $('.bmi-suggestive-message').html("not good");
+
+                } else {
+                    $('.bmi-suggestive-message').html("good");
+                }
                 console.log("BMI:" + bmi);
                 $(".bmi-val").html(bmi);
             });
@@ -253,46 +383,75 @@
                             data: data_health["bp_low"]
                         }],
                     });
-                    $.get("/get_bmi_all", function (result) {
-                        var bmi_data = result;
+                    $.get("/get_all_score", function (result) {
+                        var data_score = result;
 
 
 
                         var chart = new Highcharts.Chart({
                             chart: {
-                                renderTo: 'bmiall-chart-container',
+                                renderTo: 'score-chart-container',
                                 marginBottom: 100
                             },
                             xAxis: {
-                                categories: bmi_data["dates"],
+                                categories: data_score["dates"],
                                 labels: {
                                     rotation: 90
                                 }
                             },
                             title: {
-                                text: 'BMI Analysis'
+                                text: 'Game score analysis'
                             },
 
 
-                            series: [{
-                                name: 'BMI',
-                                data: bmi_data["bmi"]
-                            }, {
-                                name: 'Below this your underweight',
-                                data: bmi_data["bmi lower"]
-                            }, {
-                                name: 'above this you are overweight',
-                                data: bmi_data["bmi normal"]
-                            }, {
-                                name: 'above this you are obese',
-                                data: bmi_data["bmi over"]
-                            }, {
-                                name: 'above this you are obese type 1',
-                                data: bmi_data["bmi_obese"]
-                            }, {
-                                name: 'above this you are obese type 2',
-                                data: bmi_data["bmi_obese1"]
-                            }],
+                            series: [
+
+                                {
+                                    name: 'game score',
+                                    data: data_score["avg_game"]
+                                }],
+                        });
+                        $.get("/get_bmi_all", function (result) {
+                            var bmi_data = result;
+
+
+
+                            var chart = new Highcharts.Chart({
+                                chart: {
+                                    renderTo: 'bmiall-chart-container',
+                                    marginBottom: 100
+                                },
+                                xAxis: {
+                                    categories: bmi_data["dates"],
+                                    labels: {
+                                        rotation: 90
+                                    }
+                                },
+                                title: {
+                                    text: 'BMI Analysis'
+                                },
+
+
+                                series: [{
+                                    name: 'BMI',
+                                    data: bmi_data["bmi"]
+                                }, {
+                                    name: 'Below this your underweight',
+                                    data: bmi_data["bmi lower"]
+                                }, {
+                                    name: 'above this you are overweight',
+                                    data: bmi_data["bmi normal"]
+                                }, {
+                                    name: 'above this you are obese',
+                                    data: bmi_data["bmi over"]
+                                }, {
+                                    name: 'above this you are obese type 1',
+                                    data: bmi_data["bmi_obese"]
+                                }, {
+                                    name: 'above this you are obese type 2',
+                                    data: bmi_data["bmi_obese1"]
+                                }],
+                            });
                         });
                     });
                 });

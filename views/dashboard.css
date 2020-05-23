@@ -4,14 +4,32 @@ html {
     }
     
 body{
-    margin-bottom: 120px;
+    margin-bottom: 100px;
+    background-image: linear-gradient(to right, #c7f8d6 0%, #eba79b 100%);
 }
 
-/* .bmi-container {
+.jumbotron{
+
+    /* background-size: 100% 100%; */
+    background-image: url("frontpage01.jpeg");
+    /* height: 100%;
+    background-size: cover;   
+    background-position: center;
+    position: relative;  */
+  
+    background-size: cover;
+    background-position: top center;
+    height: 100%;
+    width:100%;
+    
+  
+  }  
+
+.bmi-container {
     width: 980px;
     margin: 0 auto;
-    background-color: rgb(253, 253, 253);
-} */
+    background-color: rgb(142, 218, 165);
+}
 .mood-container {
     width: 980px;
     margin: 0 auto;

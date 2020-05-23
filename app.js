@@ -267,8 +267,14 @@ app.get('/get_all_mood', function(req, res) {
         um.push(Math.round(parseFloat(2), 2));
         lm.push(Math.round(parseFloat(-2), 2));
         llm.push(Math.round(parseFloat(-5), 2));
+        var timestamp=obj["date"]
+        var todate=new Date(timestamp).getDate();
+        var tomonth=new Date(timestamp).getMonth()+1;
+        var toyear=new Date(timestamp).getFullYear();
+        var original_date=todate+'/'+tomonth+'/'+toyear;
+        dates.push(original_date);
         
-        dates.push(obj["date"]);
+        
       }
 
       res.status(200).json({'avg_mood': avg_mood, 'upper_limit':um,'lower_limit':lm,"llm":llm,"dates": dates})
@@ -372,6 +378,12 @@ app.get('/get_blood_pressure', function(req, res) {
         avg_bpu.push(Math.round(parseFloat(obj["avg_bpu"]), 2));
         avg_bpl.push(Math.round(parseFloat(obj["avg_bpl"]), 2));
         avg_bs.push(Math.round(parseFloat(obj["avg_bs"]), 2));
+        var timestamp=obj["date"]
+        var todate=new Date(timestamp).getDate();
+        var tomonth=new Date(timestamp).getMonth()+1;
+        var toyear=new Date(timestamp).getFullYear();
+        var original_date=todate+'/'+tomonth+'/'+toyear;
+        dates.push(original_date);
         dates.push(obj["date"]);
       }
 
@@ -412,6 +424,12 @@ app.get('/get_bmi_all', function(req, res) {
         bmi_over.push(Math.round(parseFloat(30), 2));
         bmi_obese.push(Math.round(parseFloat(40), 2));
         bmi_obese1.push(Math.round(parseFloat(50), 2));
+        var timestamp=obj["date"]
+        var todate=new Date(timestamp).getDate();
+        var tomonth=new Date(timestamp).getMonth()+1;
+        var toyear=new Date(timestamp).getFullYear();
+        var original_date=todate+'/'+tomonth+'/'+toyear;
+        dates.push(original_date);
         dates.push(obj["date"]);
       }
 
@@ -428,3 +446,34 @@ app.get('/get_bmi_all', function(req, res) {
 //                 var weight = parseFloat(result.result['weight']);
 
 //                 var bmi = parseFloat((weight/(height*height)) * 10000).toFixed(2);
+app.get('/get_all_score', function(req, res) {
+  let userId=req.session.user.userId
+
+  db.any('SELECT userid,AVG(game_score) AS avg_game,date(date_time) FROM game_records WHERE userid = $1 GROUP BY date(date_time),userid ORDER BY date(date_time) ASC',[userId])
+    .then((result) => {
+      let avg_game = [];
+      let dates = [];
+      
+      
+
+      let data = result;
+
+      for(i=0; i< data.length; i++) {
+        obj = data[i];
+        avg_game.push(Math.round(parseFloat(obj["avg_game"]), 2));
+    
+        var timestamp=obj["date"]
+        var todate=new Date(timestamp).getDate();
+        var tomonth=new Date(timestamp).getMonth()+1;
+        var toyear=new Date(timestamp).getFullYear();
+        var original_date=todate+'/'+tomonth+'/'+toyear;
+        dates.push(original_date);
+        
+        
+      }
+
+      res.status(200).json({'avg_game': avg_game, "dates": dates})
+  }).catch(error => {
+    console.log(error);
+  })
+})
