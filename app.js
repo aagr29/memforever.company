@@ -384,7 +384,7 @@ app.get('/get_blood_pressure', function(req, res) {
         var toyear=new Date(timestamp).getFullYear();
         var original_date=todate+'/'+tomonth+'/'+toyear;
         dates.push(original_date);
-        dates.push(obj["date"]);
+        
       }
 
       res.status(200).json({'bp_up': avg_bpu,"bp_low": avg_bpl, "blood_sugar":avg_bs, "dates": dates})
@@ -430,7 +430,7 @@ app.get('/get_bmi_all', function(req, res) {
         var toyear=new Date(timestamp).getFullYear();
         var original_date=todate+'/'+tomonth+'/'+toyear;
         dates.push(original_date);
-        dates.push(obj["date"]);
+       
       }
 
      
