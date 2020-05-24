@@ -3,9 +3,11 @@ body {
     position: relative;
     overflow-x: hidden;
     line-height: 1.4em;
+    background-color: black
    
   }
   
+
   a {
     text-decoration: none !important;
   }
@@ -21,7 +23,7 @@ body {
     margin-left: 160px;
   }
   a.brand-logo {
-    background-image: url("//multiplier.in/team-img/frontpage%20BG/multiplier - logo.png");
+    background-image: url("logo.PNG");
     height: 100%;
     width: 150px;
     background-size: 100% 100%;
@@ -103,3 +105,60 @@ body {
       margin: 20px auto;
     }
   }
+
+
+  h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 25px "Lato", sans-serif;
+    color: rgb(247, 243, 243);
+  }
+   
+  h2 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 25px "Lato", sans-serif;
+    color: rgb(243, 172, 20);
+  }
+
+  h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color:white;
+  }
+  
+  h4{
+    letter-spacing: 5px;
+    /* text-transform: uppercase; */
+    font: 20px "Lato", sans-serif;
+    color: rgb(252, 249, 249);
+    line-height: 1.5 ;
+  }
+
+  h5{
+    letter-spacing: 5px;
+    /* text-transform: uppercase; */
+    /* font: 18px "Lato", sans-serif; */
+    font: 18px "Helvetica";
+    color: rgb(252, 249, 249);
+    line-height: 1.5 ;
+  } 
+
+  h6{
+    text-align: center;
+    letter-spacing: 5px;
+    /* text-transform: uppercase; */
+    font: 15px "Lato", sans-serif;
+    color: rgb(252, 248, 248);
+    line-height: 1.5 ;
+  } 
+
+  p{
+    text-align: center;
+    letter-spacing: 5px;
+    /* text-transform: uppercase; */
+    font: 15px "Lato", sans-serif;
+    color: rgb(252, 248, 248);
+    line-height: 1.5 ;
+  } 
