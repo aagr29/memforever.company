@@ -308,9 +308,7 @@ app.get('/get_all_mood', function(req, res) {
   app.get('/game', function(req, res){
      res.render('game');
 });
-app.get('/dashboard', function(req, res){
-  res.render('dashboard');
-});
+
 
 app.post('/set_game_score', function(req, res){
   let game_score=req.body.game_score
