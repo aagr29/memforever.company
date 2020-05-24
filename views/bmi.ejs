@@ -79,9 +79,11 @@
                             </li>
                             </li>
                         </ul>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logout"><strong>LOG OUT</strong></a>
-                        </li>
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">LOG OUT</a>
+                            </li>
+                        </ul>
                     </div>
         </nav>
 
@@ -91,17 +93,19 @@
 
     <main>
 
-    <!-- <title section> -->
+        <!-- <title section> -->
         <br>
         <br>
         <div style="position:relative;">
-            <div style="color:#ddd;background-color:rgb(215, 252, 252);text-align:center;padding:50px 90px;text-align: justify;">
+            <div
+                style="color:#ddd;background-color:rgb(215, 252, 252);text-align:center;padding:50px 90px;text-align: justify;">
                 <h3 style="text-align:center; color:#0e0d0d" id="button">Overall Progression</h3>
                 <br>
-            <h4 style="color: #0f0f0f;">Click on the <strong>button</strong> on the side to see the details of your recent progress in BMI, mood, game score, and blood sugar & blood pressure. </h4>   
-            <h4 style="color: #f7f7f7;"></h4>
+                <h4 style="color: #0f0f0f;">Click on the <strong>button</strong> on the side to see the details of your
+                    recent progress in BMI, mood, game score, and blood sugar & blood pressure. </h4>
+                <h4 style="color: #f7f7f7;"></h4>
             </div>
-            </div>
+        </div>
         <!-- START OF JUMBOTRON -->
         <!-- <div class="jumbotron jumbotron-fluid">
             <div class="d-flex p-2">
@@ -120,7 +124,7 @@
             <!-- start of bmi section -->
             <div class="container">
                 <div class="row">
-                  
+
                     <div id="tab-sidebar" class="col-3 nav nav-pills" role="tablist" aria-orientation="vertical">
                         <a id="pill-A" class="nav-link col-12 active" data-toggle="pill" href="#tab-bmi" role="tab"
                             aria-controls="tab-A" aria-selected="true">BMI</a>
@@ -131,7 +135,7 @@
                         <a id="pill-D" class="nav-link col-12" data-toggle="pill" href="#tab-health" role="tab"
                             aria-controls="tab-D" aria-selected="false">Health</a>
                     </div>
-                  
+
                     <div id="tab-content" class="col-9 tab-content">
                         <div id="tab-bmi" class="tab-pane fade show active" role="tabpanel" aria-labelledby="pill-A">
                             <section id="bmianalysis">
@@ -140,9 +144,13 @@
                                 <br>
                                 <H3>This is your BMI analysis.</H3>
                                 <br>
-                                <h5>This graph is highly interactive, if you click on the graph, you can see if your BMI falls within
-                                     the range. </h5>
-                                     <h5>There are also indicators at the bottom of the graph to indicate if you are currently overweight, underweight or within the range of different types of obesity. <thead></thead> </h5>
+                                <h5>This graph is highly interactive, if you click on the graph, you can see if your BMI
+                                    falls within
+                                    the range. </h5>
+                                <h5>There are also indicators at the bottom of the graph to indicate if you are
+                                    currently overweight, underweight or within the range of different types of obesity.
+                                    <thead></thead>
+                                </h5>
 
                                 <div class="bmi-container">
 
@@ -161,8 +169,8 @@
                                     <br>
                                     <br>
                             </section>
-                        
-            
+
+
                         </div>
                         <!-- end of bmi section -->
                         <div id="tab-mood" class="tab-pane fade" role="tabpanel" aria-labelledby="pill-B">
@@ -173,9 +181,10 @@
                                 <H3>This is your mood analysis</H3>
                                 <br>
                                 <!-- <h5>Please click on the graph to see if your moods have been fluctuating.</h5> -->
-                                <h5>Please click on indicator on the bottom to to see if your moods have been good, less-than-deal or in danger zone.</h5>
-                                <h5>"less-than-ideal" means that your moods are often sad or angery.</h5>
-                                <h5>"danger" means that your moods are consistently sad or angery.</h5>
+                                <h5>Please click on indicator on the bottom to to see if your moods have been good,
+                                    less-than-ideal or in danger zone.</h5>
+                                <h5>"less-than-ideal" means that you are are often sad or angry.</h5>
+                                <h5>"danger" means that you are consistently sad or angry.</h5>
                                 <div class='mood-container'>
                                     <div id="mood-chart-container"></div>
                                     <div class="mood-avg-info">
@@ -222,13 +231,15 @@
                                 <H3>This is your health analysis</H3>
                                 <br>
                                 <h5>The below graph shows your blood pressure and blood sugar</h5>
-                                <h5>Click on the indicator at the bottom of the page to see if your blood pressure falls within the rage</h5>
-                                <h5>Suggestion is also provided below the graph based on your overall health conditions.</h5>
+                                <h5>Click on the indicator at the bottom of the page to see if your blood pressure falls
+                                    within the rage</h5>
+                                <h5>Suggestion is also provided below the graph based on your overall health conditions.
+                                </h5>
                                 <div class='mood-container'>
                                     <div id="bp-chart-container"></div>
                                     <div class="mood-avg-info">
                                         <div class="gs">your lastest blood sugar entry : <span class="bs-val"></span>
-                                        
+
                                         </div>
                                         <br>
                                         <div class="bs-suggestive-message"></div>
