@@ -310,6 +310,11 @@ app.get('/get_all_mood', function(req, res) {
 });
 
 
+app.get('/aboutus', function(req, res){
+  res.render('aboutus');
+});
+
+
 app.post('/set_game_score', function(req, res){
   let game_score=req.body.game_score
   let userId=req.session.user.userId

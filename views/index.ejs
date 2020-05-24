@@ -1,205 +1,471 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <title>MemForever Registration Page</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css">
+  <head>
+    <title>MemForever Registration Page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="flip.css">   
 </head>
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
+          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"> -->
+                    <a class="navbar-brand" href="#">MemForever</a>
+                    <!-- icon here  -->
+                     <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z" clip-rule="evenodd"/>
+                        </svg>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                        </li>
+                        </li>
+                      </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+            </header>
+            <div class="jumbotron">
+              <div class="mask rgba-black-light">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
-      <a class="navbar-brand" href="#">MemForever</a>
-      <!-- icon here  -->
-      <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd"
-          d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 01.176-.17C12.72-3.042 23.333 4.867 8 15z"
-          clip-rule="evenodd" />
-      </svg>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <a class="nav-link" href="/login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/registration">Register</a>
-          </li>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="d-flex p-2">
-        <div class="col-md-6">
-          <div class="row d-flex justify-content-center text-center">
-            <h3 id="title" class="display-4 pt-5 mb-2">Welcome to <span
-                style="font-weight: bold; font-style: italic; color: rgb(214, 131, 7);">MemForever</span></h3>
-            <h4 id="title_mo" class="white-text my-4">
-              A platform dedicated to help dementia patients. Once registered, MemForever helps you track your health,
-              daily chores, mood and find out your overall well-being with your health Data Analysis Report.
-            </h4>
-            <div class="col-md-8">
-              <a class="btn btn-lg btn-warning" href="/login" role="button" id="button">Login</a>
-              <br>
-              <br>
-              <br>
-              <h5 id="regis-text"><strong>For new user, click here to register</strong></h5>
-              <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
+                    <div class="row d-flex justify-content-start text-start">
+                          <div class="col-lg-6">
+                          <h3 id="title" class="display-4 pt-5 mb-2"><span style="font-family:Helvetica, sans-serif  color: rgb(1, 5, 12);"><strong>MemForever</strong></span></h3> 
+                  <br>
+                  <br>
+                    <div class="row d-flex justify-content-start text-start"></div>
+                      <a class="btn btn-warning btn-lg" href="/login" role="button">Login</a>
+                      <br />
+                      <br />
+                      <h5 id="regis-text"><strong>For new user, click here to register</strong></h5>
+                      <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
+                  </div>
+              </div>
+          </div>
             </div>
-          </div>
-          <br />
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    <br />
-    <!-- this is the second section -->
-    <!-- first row  -->
-    <div class="container fbox">
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <div class="card">
-            <p class="card__image">
-              <img src="mood02.jpeg" class="card-img-top" alt="...">
-          </div>
-        </div>
-      </div>
-      <div class=" col-lg-6 col-sm-12" id="text-card-3">
-        <h4>Mood tracking</h4>
-        <br>
-        <h5>Memforever helps you track your emotion everyday. This information can provide an important cue to you, your
-          family, and your doctor to see how your moods have changed overtime.</h5>
-      </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <!-- second row  -->
-    <div class="container fbox" id="card-2">
-      <div class="col-lg-6 col-sm-12" id="text-card-3">
-        <h4>Cognitive Game</h4>
-        <br>
-        <h5> Memforever provides a list of simple muliple choice questions aim to to keep your mind sharp. If you play
-          the "game" on a daily basis, the score you received will be recorded to provide you some insight on your
-          cognitive progression.</h5>
-      </div>
-      <div class="col-lg-6 col-sm-12">
-        <div class="card">
-          <p class="card__image">
-            <img src="brain.jpg" class="card-img-top" alt="...">
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <br>
-    <!-- third row  -->
-    <div class="container fbox" id="card-3">
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <div class="card">
-            <p class="card__image">
-              <img src="health02.jpg" class="card-img-top" alt="...">
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-sm-12" id="text-card-3">
-        <h4>Health diary</h4>
-        <br>
-        <h5>MemForever helps to track your blood sugar, blood pressure and weight.
-          When you enter your health data to Memforever on a daily basis, MemForever will analyse your health based on
-          the data you provided, this information might be very useful for you, your family, and your doctor.</h5>
-      </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <br>
-    <!-- third row  -->
-    <div class="container fbox">
-      <div class="col-lg-6 col-sm-12" id="text-card-3">
-        <h4> Health Data Analysis Report</h4>
-        <br>
-        <h5>By using MemForever platform on a daily basis, you would be able see a track record for your health
-          condition, your game score and your mood.
-          MemForever turns this track records into graphic report so that you can understand your well-being and spot
-          any changes.
-          General suggestions according to your health condition is also provided to help you adjust your life style
-          accordingly.</h5>
-      </div>
-      <div class="col-lg-6 col-sm-12">
-        <div class="card">
-          <p class="card__image">
-            <img src="data01.jpg" class="card-img-top" alt="...">
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <br>
-    <!-- fourth row  -->
-    <div class="container fbox" id="card-5">
-      <div class="row">
-        <div class="col-lg-6 col-sm-12">
-          <div class="card">
-            <p class="card__image">
-              <img src="todolist01.jpg" class="card-img-top" alt="...">
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-sm-12" id="text-card-3">
-        <h4>To-do list</h4>
-        <br>
-        <h5>MemForever provides a simple to use to do list platform.
-          You can add your daily to do tasks and once you have finished them, you can simply remove the task from the
-          list.</h5>
-      </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <br>
-    <br>
-  </main>
-  <footer class="footer">
-    <!-- Copyright -->
-    <!-- ❤️  -->
-    <br>
-    <br>
-    <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
-      <a class="white-text"> <strong>ACQP IT</strong> </a>.
-    </div>
-    <br>
-    <br>
-    <!-- Copyright -->
-  </footer>
-  <!-- Optional JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</body>
+           <!-- title section  -->
+<div style="position:relative;" id="intro">
+  <div style="color: rgb(5, 5, 5);background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;"><strong>MemForever is dedicated to help dementia patients</strong></h3>
+  </div>
+  </div>
 
+  <!-- stats section  -->
+  <div class="container fbox" id="card-2">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+        <h6><strong>Estimated number of Australians with dementia, 2018 to 2030</strong></h6>
+        <div id="chartdiv"></div>
+        <br>
+        </div>
+      <div class="col-lg-6 col-md-12 col-sm-12" id="text-card-3">
+        <!-- HTML -->
+        <h4>Dementia Growth</h4>
+        <br>
+        <br>
+        <h5>By 2030, about 550,000 Australians are expected to have dementia, and 42% of
+            those aged 85 or older. By 2057, this number is expected to extend to about 1 million
+            Australians.</h5>
+        <h5>Australian is an aging society, dementia is an urgent issue that should not be overlooked. 
+            MemForever is a website dedicated to help dementia patients and their family. </h5>
+        </div>
+    </div>
+         </div>
+         
+          </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+
+    <style>
+        #chartdiv {
+          width: 100%;
+          height: 450px;
+        }
+        </style>
+        
+        <!-- Resources -->
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        
+        <!-- Chart code -->
+        <script>
+        am4core.ready(function() {
+        
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        var chart = am4core.create("chartdiv", am4charts.XYChart,{
+                "type": "serial",
+                "theme": "light",
+                "titles": [{
+                  "text": "My Chart Title"
+                }, {
+                  "text": "My Chart Sub-Title",
+                  "bold": false
+                }],
+        });
+        
+        //chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        
+        chart.data = [
+          {
+            country: "2018",
+            visits: 376000
+          },
+          {
+            country: "2019",
+            visits: 390076
+          },
+          {
+            country: "2020",
+            visits: 404152
+          },
+          {
+            country: '2021',
+            visits: 418228
+          },
+          {
+            country: '2022',
+            visits: 431304
+          },
+          {
+            country: '2023',
+            visits: 446380
+          },{
+            country: "2024",
+            visits: 460456
+          },
+          {
+            country: '2025',
+            visits: 474532
+          },
+          {
+            country: '2026',
+            visits: 488608
+          },
+          {
+            country: '2027',
+            visits: 502684
+          },
+          {
+            country: '2028',
+            visits: 516760
+          },
+          {
+            country: '2029',
+            visits: 530900
+          },
+          {
+            country: '2030',
+            visits: 550000
+          },
+    
+        ];
+        
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.renderer.grid.template.location = 0;
+        categoryAxis.dataFields.category = "country";
+        categoryAxis.renderer.minGridDistance = 40;
+        categoryAxis.fontSize = 11;
+        
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.min = 0;
+        valueAxis.max = 600000;
+        valueAxis.strictMinMax = true;
+        valueAxis.renderer.minGridDistance = 30;
+        
+        var series = chart.series.push(new am4charts.ColumnSeries());
+        series.dataFields.categoryX = "country";
+        series.dataFields.valueY = "visits";
+        series.columns.template.tooltipText = "{valueY.value}";
+        series.columns.template.tooltipY = 0;
+        series.columns.template.strokeOpacity = 0;
+        
+        // as by default columns of the same series are of the same color, we add adapter which takes colors from chart.colors color set
+        series.columns.template.adapter.add("fill", function(fill, target) {
+          return chart.colors.getIndex(target.dataItem.index);
+        });
+        
+        }); // end am4core.ready()
+        </script>
+        
+<!-- Section explaining why using MemForever  -->
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 90px;text-align: justify;">
+      <h3 style="text-align:center; color:#f7f7f7" id="button">Why use MemForever?</h3>
+      <br>
+  <h4 style="color: #f7f7f7;">Dementia is irreversible and every patient deteriorates at a different speed.  The early stage of dementia is often overlooked, because the onset is gradual.</h4>   
+  <h4 style="color: #f7f7f7;">MemForever is a platform that helps patients tracking the progress of dementia. Once registered, MemForever can track and analyze your conditions from your mood, cognition, BMI, and other health conditions in order to provide some insights into your progress.</h4>
+  </div>
+  </div>
+  <!-- explaining functions of Memforever  -->
+  <div id="flipbox-section" style="height: 35rem;"> 
+
+  <h3 id="feature-comment" style="text-align:center;"><strong>MemForever has functions to help you track your overall well-being</strong></h3>
+  <h4 id="feature-comment" style="text-align:center;"><strong>Hover over the image, you can see sample data analysis provided by different function.</strong></h4>
+ <!-- flip card section  -->
+ <div class="boxesContainer">
+  <!-- <div class="row text-center"> -->
+    <!-- mood  flipcard-->
+  <div class="cardBox" >
+    <div class="card">
+      <div class="front" style="background-image: url(moodScreen03.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+      </div>
+
+      <div class="back" style="background-image: url(moodScreen.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+      </div>
+    </div>
+  </div>
+  <!-- game  flipcard-->
+  <div class="cardBox">
+    <div class="card">
+      <div class="front" style="background-image: url(gameScreen.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+      </div>
+
+      <div class="back" style="background-image: url(gameScore.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+    </div>
+    </div>
+  </div>
+<div>
+  <!-- bpbg flipcard-->
+  <div class="cardBox">
+    <div class="card">
+      <div class="front" style="background-image: url(bpbg.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+      </div>
+      <div class="back" style="background-image: url(bpbg01.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+    </div>
+    </div>
+  </div>
+</div>
+ <!-- BMI flipcard-->
+  <div class="cardBox">
+    <div class="card">
+      <div class="front" style="background-image: url(BMI.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+      </div>
+      <div class="back" style="background-image: url(bmiScore.png); background-repeat:no-repeat;
+      background-position: center center; background-size: cover;">
+        <h3 style="padding-top: 6.5rem;"></h3>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--.boxesContainer-->
+
+
+
+  <script>
+
+    $('.flip').hover(function () {
+      $(this).find('.card').toggleClass('flipped');
+
+    });
+
+  </script>
+
+  </div>
+
+ 
+  <!-- explain more on the fucntion  -->
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 90px;text-align: justify;">
+        <h3 style="text-align:center; color:#f7f7f7" id="button">MemForever has so much to offer </h3>
+        <h3 style="text-align:center; color:#f7f7f7" id="button">Please see the functions below, they are all designed for you !  </h3>
+        
+    <!-- <h4 style="color: #f7f7f7;">Dementia is a fatal disease not only that it is irreversible but every patient deteriorates at a different speed.  How do we combat this disease when we don't know how sick we are? </h4>   
+    <h4 style="color: #f7f7f7;">MemForever is a platform dedicated to help dementia patients. Once registered, MemForever tracks and analyzes your conditions from your mood, cognition, BMI, and other health conditions in order to provide some insights into your progress.</h4> -->
+    </div>
+    </div>
+
+   <!-- this is explaination section -->
+           <div class="container-2"> 
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <!-- <div class="card">-->
+                  <p class="card__image"> 
+                    <img src="moodScore-lg.png" class="card-img-top" alt="..." height="500px">
+                  </div>
+              <div class="col-lg-6 col-md-12 col-sm-12" id="text-card-3">
+                <h4>Mood tracking</h4>
+                <br>
+               <h5>Memforever helps you track your emotion everyday. This information can provide an important cue to you, your family, and your doctor to see how your moods have changed overtime.</h5>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+           <br>
+            <div class="container-2">
+                <!-- <div class="row" id="row-2">
+                  <div class="col"> -->
+                    <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12" id="text-card-3">
+                    <h4>Cognitive Game</h4>
+                    <br>
+                    <h5> Memforever provides a list of simple muliple choice questions aim to to keep your mind sharp. If you play the "game" on a daily basis, the score you received will be recorded to provide you some insight on your cognitive progression.</h5>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <!-- <div class="card"> -->
+                      <p class="card__image">
+                        <img src="gameScore-lg.png" class="card-img-top" alt="..." height="500px">  
+                      </div>
+                     </div>
+                      </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <!-- health section  -->
+                <div class="container-2">
+                    <div class="row">
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <!-- <div class="card"> -->
+                          <p class="card__image">
+                            <img src="bpbg-lg-01.png" class="card-img-top" alt="...">
+                          </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12" id="text-card-3">
+                        <h4>Blood Pressure & Blood Sugar </h4>
+                        <br>
+                       <h5>MemForever helps to track your blood sugar, blood pressure and weight. 
+                        Blood pressure helps identify hypertension, and hypertension often occurs alongside with other conditions such as different typs of diabetes. 
+                        MemForever will analyse your health based on the data you provided, this information might be very useful for you, your family, and your doctor.</h5>
+                      </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                 <!-- data analysis section  -->
+                <div class="container-2">
+                  <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12" id="text-card-3">
+                        <h4> Data Analysis Report</h4>
+                        <br>
+                       <h5>By using MemForever platform on a daily basis, you would be able see a track record for your health condition, your game score and your mood.  
+                         MemForever turns this track records into graphic report so that you can understand your well-being and spot any changes.  
+                         You can use this data analysis report to help you adjust your life style accordingly.</h5>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12">
+                        <!-- <div class="card"> -->
+                          <p class="card__image">
+                            <img src="BMI-lg.png"  class="card-img-top"  alt="..." >
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                    <br>
+                    <br>
+                    <!-- to do list seciton  -->
+                    <div class="container-2">
+                      <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12">
+                          <!-- <div class="card"> -->
+                            <p class="card__image">
+                              <img src="todolist01.png" class="card-img-top" alt="...">
+                            </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12" id="text-card-3">
+                          <h4>To-do list</h4>
+                          <br>
+                          <h5>MemForever provides an easy to use to-do list platform. 
+                            You can add your daily tasks on the platform and remove the tasks when you have completed them.</h5>
+                        </div>   
+                        </div>
+                      </div>
+                  </div>
+           <br>
+           <!-- mood page section  -->
+<div style="position:relative;">
+  <div id="wordbox" style="color:rgb(17, 16, 16);background-color:rgb(248, 248, 246);text-align:center;padding:50px 90px;text-align: justify;">
+      <h3 style="text-align:center; color:#050505" id="button">Memforever provides easy to use tools, Sign up today !</h3>
+      <br>
+  <h4 style="color: #f7f7f7;"></h4>
+  </div>
+  </div>
+<div class="bgimg-2">
+<div class="caption">
+                      <h5 style="font-size:35px;color: #0b0c0c;"></h5>
+                      <a class="btn btn-primary btn-lg" href="/registration" role="button">Register</a>
+                  </div>
+</div>
+</div>
+ <!-- <footer class="footer"> -->
+  <!-- Copyright -->
+  <!-- ❤️  -->
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container-3">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify"> </i> ACQP IT is a team of of Mastet of IT studnets at Monash University. MemForever is a project dedicated for social good. 
+              We used Node.js Express Postgrest Javascript CSS HTML to complete this project. <a href="/aboutUs">See our profile</a>. 
+              </p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="/aboutUs">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container-3">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <p class="copyright-text"> Develop by <strong>ACQP IT</strong> with ❤️
+            </p>
+          </div>
+        </div>
+      </div>
+  <!-- Copyright -->
+</footer>
+
+      
+      
+    <!-- Optional JavaScript -->
+    <!--jQuery first, then Popper.js, then Bootstrap JS -->
+    
+   <script src="flip.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -1,0 +1,105 @@
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    line-height: 1.4em;
+   
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  }
+  .navbar-fixed nav ul a {
+    color: #555 !important;
+  }
+  .navbar-fixed ul.left.hide-on-med-and-down {
+    margin-left: 160px;
+  }
+  a.brand-logo {
+    background-image: url("//multiplier.in/team-img/frontpage%20BG/multiplier - logo.png");
+    height: 100%;
+    width: 150px;
+    background-size: 100% 100%;
+  }
+  
+  .navbar-nav li a {
+    font-family: Lato;
+    font-size: 14px;
+    padding: 25px !important;
+  }
+  
+  .navbar-nav li.active {
+    background-color: #fff !important;
+  }
+  
+
+  
+  .panel {
+    /* margin: 10px auto; */
+    padding: 20px;
+    font-family: Lato;
+    font-weight: 300;
+    /* background-color: #fff; */
+    text-align: center;
+    border-width: 2px;
+    opacity: 0;
+    transform: translateY(200px) scale(2);
+    /*   opacity: 1;
+    transform: ; */
+    transition: 0.4s ease;
+  }
+  
+  img{
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .col-md-6 .img{
+    /* height: 50%;
+    width: 50%; */
+    height: 200px;
+    width: 200px;
+    background-size: 100%;
+  }
+  
+  .col-md-6 .img-responsive img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .panel .content {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  
+  .navbar-nav li a.mainLinks {
+    padding: 15px 10px !important;
+    margin: 0;
+  }
+  
+  .navbar-nav li a.mainLinks button {
+    padding: 7.5px 20px;
+    box-sizing: border-box;
+  }
+  .nav-wrapper .right .mainLinks button {
+    margin: 0;
+  }
+  
+  @media only screen and (max-width: 990px) {
+    .col-md-6 {
+      display: block;
+      float: none;
+    }
+    .col-md-6 div {
+      text-align: center;
+      padding: 5px;
+    }
+    .col-md-6 .img-responsive {
+      margin: 20px auto;
+    }
+  }

@@ -213,11 +213,11 @@
   }
   
   .btn--green {
-    background: #6ac9e0;
+    background: #0ebae6;
   }
   
   .btn--green:hover {
-    background: #f33785;
+    background: #37ddf3;
   }
   
   /* ==========================================================================
@@ -471,3 +471,35 @@
     
     }
     
+    h2 {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font: 25px "Lato", sans-serif;
+      color: #111;
+    }
+    
+    /* h4{
+      letter-spacing: 5px;
+      /* text-transform: uppercase; 
+      font: 20px "Lato", sans-serif;
+      color: rgb(7, 105, 196);
+      line-height: 1.5 ;
+    } */
+  
+    h4{
+      letter-spacing: 5px;
+      /* text-transform: uppercase; */
+      /* font: 18px "Lato", sans-serif; */
+      font: 20px "Helvetica";
+      color: rgb(6, 78, 211);
+      line-height: 1.5 ;
+    } 
+  
+    h6{
+      text-align: center;
+      letter-spacing: 5px;
+      /* text-transform: uppercase; */
+      font: 15px "Lato", sans-serif;
+      color: rgb(8, 8, 8);
+      line-height: 1.5 ;
+    } 
