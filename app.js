@@ -314,9 +314,7 @@ app.get('/aboutus', function(req, res){
   res.render('aboutus');
 });
 
-app.get('*', function(req, res){
-  res.render('error');
-});
+
 
 app.post('/set_game_score', function(req, res){
   let game_score=req.body.game_score
@@ -525,3 +523,8 @@ app.get('/get_latest_bp_low', function(req, res) {
     console.log(error);
   })
 })
+
+
+app.get('*', function(req, res){
+  res.render('error');
+});
