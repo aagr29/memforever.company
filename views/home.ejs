@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="experiment.css">
 </head>
 
 <body>
@@ -33,11 +34,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="/healthinfo">Health</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" href="/game">Game</a>
           </li>
@@ -59,13 +58,14 @@
   <br>
   <br>
   <br>
-  <div class="row justify-content-around">
-    <div class="col-10">
-      <br>
-      <h3>Great to see you again !! Please pick a card ❤️ </h3>
-
+  <br>
+  
+  <br>
+  <div style="position:relative;" id="intro">
+    <div style="color: rgb(5, 5, 5);text-align:center;padding:20px 20px;text-align: justify;">
+    <h3 style="text-align:center;"><strong>Great to see you again !! Please pick a card ❤️</strong></h3>
     </div>
-  </div>
+    </div>
   <br>
   <main>
     <div class="card-deck">
@@ -75,8 +75,8 @@
           <!-- <h5 class="card-title" >Track your health</h5> -->
           <a href="/healthinfo" id="cardbtn" class="btn btn-lg btn-primary">Track my health</a>
           <br>
+          <br>
           <h4 class="card-text">Track my blood sugar and blood pressure.</h4>
-
         </div>
       </div>
 
@@ -84,8 +84,9 @@
         <img src="todolist02.png" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="/todolist" id="cardbtn" class="btn btn-lg btn-primary">To-do list</a>
+          <br>
+          <br>
           <h4 class="card-text">Track my chores with a simple to use to-do list.</h4>
-
         </div>
       </div>
 
@@ -93,24 +94,23 @@
         <img src="gameScreen.png" class="card-img-top" alt="...">
         <div class="card-body">
           <a href="/game" id="cardbtn" class="btn btn-lg btn-primary">Play game</a>
+          <br>
+          <br>
           <h4 class="card-text"> A total of eight questions to test my cognitive progress.</h4>
-
         </div>
 
       </div>
       <div class="card" style="width: 15rem;">
         <img src="dashboard.png" class="card-img-top" alt="...">
         <div class="card-body">
-
           <a href="/bmi" id="cardbtn" class="btn btn-lg btn-primary">See my progress</a>
+          <br>
+          <br>
           <h4 class="card-text"> See my progress in mood, blood pressure, blood sugar, bmi and game score.</h4>
-
         </div>
       </div>
-
   </main>
   <br>
-
   <br>
   <footer class="footer">
     <!-- Copyright -->
@@ -118,7 +118,7 @@
     <br>
     <br>
     <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by
-      <a class="white-text"> <strong>ACQP IT</strong> </a>.
+      <a class="white-text">  <a href="/aboutUs" style="color:aliceblue"><strong>ACQP IT</strong></a>.
     </div>
     <br>
     <br>
@@ -137,5 +137,4 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 </body>
-
 </html>

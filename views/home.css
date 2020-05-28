@@ -23,7 +23,10 @@ h2{
     padding: 50px 0;
     box-sizing: border-box;
   }
+/* .card-body{
 
+  margin-bottom: -3rem;
+} */
   
   .card__image{
     margin-top: 0px;
@@ -76,12 +79,14 @@ h2{
     
     h4{
       letter-spacing: 5px;
-      /* text-transform: uppercase; */
-      font: 18px "Helvetica";
+   
+      /* font-family:'Balsamiq Sans', cursive;
+      font: 15px; */
       color: rgb(16, 17, 17);
       line-height: 1.5 ;
-      /* text-align: justify; */
-      
+    
+      font: 18px 'Balsamiq Sans', cursive;
+      /* font: 15px; */
     }
   
     h5{

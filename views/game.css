@@ -1,9 +1,3 @@
-/* *, *::before, *::after{
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
-    
-    } */
-
  
 html {
 	position: relative;
@@ -22,19 +16,15 @@ html {
     
     
     body.correct{
-    
         --hue: var(--hue-correct);
     }
     
     body.wrong{
-    
         /* --hue: var(--hue-wrong); */
         --hue: var(--hue-wrong);
-        
     }
     
     .container{
-    
         width: 800px;
         max-width:80%;
         /* background-color:#ffffb3; */
@@ -95,18 +85,14 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        
-      
     }
     
     .hide{
-    
         display:none;
     }
     
     #endgame{
     color: black;
-        
     }
 
     .footer {
@@ -118,3 +104,5 @@ html {
         text-align: center;
         position: absolute;
     }
+
+    

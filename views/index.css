@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 body{
 color: white;
   
@@ -137,10 +139,10 @@ color: white;
   }
 
 
-h3{
+/* h3{
   font-family: Georgia;
   color:#030303;
-}
+} */
 
 .container-1{
   margin-top: 15rem;
@@ -237,29 +239,44 @@ h3{
     font-size: 25px;
     letter-spacing: 10px;
   }
+
+  #intro-1{
+    letter-spacing: 2px;
+    /* text-transform: uppercase;
+    font: 15px "Lato", sans-serif; */
+    font-family:'Balsamiq Sans', cursive;
+    font-size: 50px;
+    color: #111;
+  }
   
   h3 {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    font: 15px "Lato", sans-serif;
+    font-family:'Balsamiq Sans', cursive;
+    /* font-size: 20px; */
+  /* font: 15px "Lato", sans-serif;  */
+    /* font-family:'Balsamiq Sans', cursive;
+    font-size: 50px; */
     color: #111;
   }
   
   h4{
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     /* text-transform: uppercase; */
-    font: 20px "Lato", sans-serif;
+    /* font: 20px "Lato", sans-serif; */
+    font-family: 'Balsamiq Sans', cursive;
     color: rgb(10, 10, 10);
-    line-height: 1.5 ;
+    line-height: 1.5;
   }
 
   h5{
-    letter-spacing: 5px;
+    letter-spacing: 2.5px;
     /* text-transform: uppercase; */
     /* font: 18px "Lato", sans-serif; */
-    font: 18px "Helvetica";
+    font: 20px "Helvetica";
+    /* font-family: 'Balsamiq Sans', cursive; */
     color: rgb(8, 8, 8);
-    line-height: 1.5 ;
+    line-height: 1.5;
   } 
 
   h6{
