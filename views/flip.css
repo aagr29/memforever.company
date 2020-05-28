@@ -16,8 +16,8 @@ margin-bottom: 1rem;
   margin: 1% 0 0 1%;
   -webkit-perspective: 800px;
   perspective: 800px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
   /* width: 23.7%; */
   width: 23%;
 }
