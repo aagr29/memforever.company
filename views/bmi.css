@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
 html {
 	position: relative;
 	  min-height: 100%;
@@ -10,25 +12,27 @@ body{
 
 
 .bmi-container {
-    width: 980px;
+    /* width: 980px; */
+    width: 100%;
     margin: 0 auto;
     background-color:#c4f8cc;
 }
 .mood-container {
-    width: 980px;
+    width: 100%;
     margin: 0 auto;
     background-color:#fad9dc;
 }
 
 .bmi{
-    width: 980px;
+    /* width: 980px; */
+    width: 100%;
     margin: 0 auto;
     background-color:#f4f9c3;
 
 }
 
 .gs-info{
-    width: 980px;
+    width: 100%;
     margin: 0 auto;
     background-color:#daf7df;
 }
@@ -45,7 +49,7 @@ body{
 
 .mood-avg-info{
 
-    width: 980px;
+    width: 100%;
     margin: 0 auto;
     background-color: #f1f7a2;
 }
@@ -100,26 +104,28 @@ body{
 h3{
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 30px "Lato", sans-serif;
+    /* font: 30px "Lato", sans-serif; */
+    font-family: 'Balsamiq Sans', cursive;
     color: #111;
   }
   
-  h4{
-    letter-spacing: 5px;
+  h5{
+    letter-spacing: 3px;
     /* text-transform: uppercase; */
-    font: 20px "Lato", sans-serif;
+    /* font: 20px "Lato", sans-serif; */
+    font-family: 'Balsamiq Sans', cursive;
     color: rgb(10, 10, 10);
-    line-height: 1.5 ;
+    line-height: 1.3 ;
   }
 
-  h5{
+  /* h5{
     letter-spacing: 4px;
     /* text-transform: uppercase; */
-    /* font: 18px "Lato", sans-serif; */
+    /* font: 18px "Lato", sans-serif; 
     font: 18px "Helvetica";
     color: rgb(8, 8, 8);
     line-height: 1.5 ;
-  } 
+  }  */
 
   h6{
     text-align: center;

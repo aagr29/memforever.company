@@ -37,11 +37,11 @@
             40%, 60% { transform: var(--transform-2) }
         }
         body {
-            height: 100vh;
+            /* height: 100vh;
             /* display: flex; */
-            justify-content: center;
-            /* align-items: flex-start;  */
-            margin: 0;
+            /* justify-content: center; */
+            /* align-items: flex-start;  
+            margin: 0; */
             overflow: hidden;
             font-family: 'Balsamiq Sans', cursive;
             animation: bgColorAnimate var(--pufferfish-bloat-duration) linear infinite;

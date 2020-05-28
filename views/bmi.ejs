@@ -96,25 +96,12 @@
                 style="color:#ddd;background-color:rgb(215, 252, 252);text-align:center;padding:50px 90px;text-align: justify;">
                 <h3 style="text-align:center; color:#0e0d0d" id="button">Overall Progression</h3>
                 <br>
-                <h4 style="color: #0f0f0f;">Click on the <strong>button</strong> on the side to see the details of your
-                    recent progress in BMI, mood, game score, and blood sugar & blood pressure. </h4>
-                <h4 style="color: #f7f7f7;"></h4>
+                <h5 style="color: #0f0f0f;">Click on the <strong>button</strong> on the side to see the details of your
+                    recent progress in BMI, mood, game score, and blood sugar & blood pressure. </h5>
+                <h5 style="color: #f7f7f7;"></h5>
             </div>
         </div>
-        <!-- START OF JUMBOTRON -->
-        <!-- <div class="jumbotron jumbotron-fluid">
-            <div class="d-flex p-2">
-                <div class="col-md-6">
-                    <div class="row d-flex justify-content-center text-center">
-                        <h3 id="title" class="display-4 pt-5 mb-2"> <span
-                                style="font-weight: bold; font-style: italic; color: rgb(214, 131, 7);">Your
-                                Analysis</span>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- END OF JUMBOTRON IMAGE -->
+        <div style="position:relative;">
         <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
             <!-- start of bmi section -->
             <div class="container">
@@ -146,24 +133,28 @@
                                     currently overweight, underweight or within the range of different types of obesity.
                                     <thead></thead>
                                 </h5>
-
+                            <!-- code for bmi graph display -->
+                
                                 <div class="bmi-container">
-
+                  
                                     <div id="bmiall-chart-container">
-                                        <!-- code for bmi graph display -->
+                                   
                                     </div>
 
                                     <div class="bmi-info">
                                         <div class="bmi">YOUR BMI IS: <span class="bmi-val"></span></div>
                                         <div class="bmi-info">
                                             <div class="bmi-suggestive-message">
-
                                             </div>
                                         </div>
+                                    
                                     </div>
                                     <br>
                                     <br>
-                            </section>
+                                </div>   
+                            
+                            <div>
+                        </section>
 
 
                         </div>
@@ -249,8 +240,7 @@
                                         <div class="bpu-suggestive-message"></div>
                                     </div>
                                     <br>
-                                    <br>
-                                    <br>
+    
                                     <h5>The below graph shows your daily weight</h5>
 
                                     <div class='mood-container'>
@@ -261,10 +251,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            
 
-        </div>
-
+        
+    
     </main>
     <!-- Jquery JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

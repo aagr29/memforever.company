@@ -59,16 +59,7 @@ h2{
     height: 40%;
   } 
 
-  .footer {
-	
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    
-    background-color: rgb(12, 11, 11);
-    color: white;
-    text-align: center;
-    }
+  
 
     h2 {
       letter-spacing: 5px;
@@ -97,3 +88,25 @@ h2{
       color: rgb(8, 8, 8);
       line-height: 1.5 ;
     } 
+
+    .footer {
+	
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      
+      background-color: rgb(12, 11, 11);
+      color: white;
+      text-align: center;
+      }
+/* 
+      .footer {
+	
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        
+        background-color: rgb(12, 11, 11);
+        color: white;
+        text-align: center;
+        } */
