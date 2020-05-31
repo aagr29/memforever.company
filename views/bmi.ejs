@@ -174,7 +174,7 @@
                                 <div class='mood-container'>
                                     <div id="mood-chart-container"></div>
                                     <div class="mood-avg-info">
-                                        <div class="mood-avg">your average mood score : <span
+                                        <div class="mood-avg">your average mood score: <span
                                                 class="mood-avg-val"></span></div>
                                         <div class="mood-suggestive-message"></div>
                                     </div>
@@ -195,13 +195,13 @@
                                 <div class="mood-container">
                                     <div id='score-chart-container'></div>
                                     <div class="mood-avg-info">
-                                        <div class="game-avg">your average game score : <span
+                                        <div class="game-avg">your average game score out of 8: <span
                                                 class="game-avg-val"></span></div>
                                         <div class="game-suggestive-message"></div>
                                     </div>
                                 </div>
                                 <div class="gs-info">
-                                    <div class="gs">Your latest game score : <span class="gs-val"></span></div>
+                                    <div class="gs">Your latest game score out of 8: <span class="gs-val"></span></div>
                                 </div>
                                 <br>
                                 <br>
@@ -293,7 +293,7 @@
                     $('.bmi-suggestive-message').html("obese, try to to reach a bmi of 25")
                 }
                 else {
-                    $('.bmi-suggestive-message').html("you need professional advice")
+                    $('.bmi-suggestive-message').html("We recommend you visit your family doctor")
                 }
                 console.log("BMI:" + bmi);
                 $(".bmi-val").html(bmi);
@@ -307,7 +307,7 @@
                     $('.bs-suggestive-message').html("Your blood sugar is normal");
                 }
                 else {
-                    $('.bs-suggestive-message').html("you need professional advice")
+                    $('.bs-suggestive-message').html("We recommend you visit your family doctor")
                 }
 
                 $(".bs-val").html(bs);
@@ -320,7 +320,7 @@
                     $('.bpl-suggestive-message').html("Your blood pressure lower level is normal");
                 }
                 else {
-                    $('.bpl-suggestive-message').html("you need professional advice")
+                    $('.bpl-suggestive-message').html("We recommend you visit your family doctor")
                 }
 
                 $(".bpl-val").html(bp_low);
@@ -334,7 +334,7 @@
                     $('.bpu-suggestive-message').html("Your blood pressure upper level is normal");
                 }
                 else {
-                    $('.bpu-suggestive-message').html("you need professional advice")
+                    $('.bpu-suggestive-message').html("We recommend you visit your family doctor")
                 }
 
                 $(".bpu-val").html(bp_up);
@@ -355,10 +355,10 @@
                 var mood_avg_str = mood_avg.toFixed(2);
                 if (mood_avg > 0) {
 
-                    $('.mood-suggestive-message').html("keep going");
+                    $('.mood-suggestive-message').html("keep going, you are on the right path");
 
                 } else {
-                    $('.mood-suggestive-message').html("This is not looking good to need work on your mood");
+                    $('.mood-suggestive-message').html("This is not particularly good, you need to work on your emotions");
                 }
 
 
@@ -371,7 +371,7 @@
                 var game_avg_str = game_avg.toFixed(2);
                 if (game_avg > 4) {
 
-                    $('.game-suggestive-message').html("keep going");
+                    $('.game-suggestive-message').html("keep going, you scored better than average");
 
                 } else {
                     $('.game-suggestive-message').html("This is not looking good to need work on your cognition skills");
@@ -433,7 +433,7 @@
                         name: "mood score",
                         data: mood_data["avg_mood"]
                     }, {
-                        name: 'Good and statble mood',
+                        name: 'Good and stable mood',
                         data: mood_data["upper_limit"], visible: false
                     }, {
                         name: 'less-than-ideal',
