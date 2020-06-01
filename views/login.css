@@ -1,9 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 /* ==========================================================================
    #FONT
    ========================================================================== */
    .font-robo {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 18px 'Balsamiq Sans', cursive;
   }
   
   /* ==========================================================================
@@ -122,7 +122,7 @@
   }
   
   body {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 18px 'Balsamiq Sans', cursive;
     font-weight: 400;
     font-size: 14px;
   }
@@ -196,7 +196,7 @@
     display: inline-block;
     padding: 0 25px;
     cursor: pointer;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 18px 'Balsamiq Sans', cursive;
     color: rgb(19, 15, 15);
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -233,7 +233,7 @@
   
   .table-condensed td, .table-condensed th {
     font-size: 14px;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 18px 'Balsamiq Sans', cursive;
     font-weight: 400;
   }
   
@@ -482,9 +482,9 @@
       }
 
       h2 {
-        letter-spacing: 5px;
+        letter-spacing: 2px;
         text-transform: uppercase;
-        font: 30px "Lato", sans-serif;
+        font: 30px 'Balsamiq Sans', cursive;
         color: #111;
       }
       
@@ -497,19 +497,19 @@
       } */
     
       h4{
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         /* text-transform: uppercase; */
         /* font: 18px "Lato", sans-serif; */
-        font: 20px "Helvetica";
+        font: 20px  'Balsamiq Sans', cursive;
         color: rgb(6, 78, 211);
         line-height: 1.5 ;
       } 
     
       h6{
         text-align: center;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
         /* text-transform: uppercase; */
-        font: 15px "Lato", sans-serif;
+        font: 15px 'Balsamiq Sans', cursive;
         color: rgb(8, 8, 8);
         line-height: 1.5 ;
       } 

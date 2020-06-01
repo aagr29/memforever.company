@@ -39,7 +39,7 @@
     <!-- floating nav bar     -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#">MemForever</a>
+            <a class="navbar-brand" href="/home">MemForever</a>
             <svg class="bi bi-heart" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -94,10 +94,10 @@
         <div style="position:relative;">
             <div
                 style="color:#ddd;background-color:rgb(215, 252, 252);text-align:center;padding:50px 90px;text-align: justify;">
-                <h3 style="text-align:center; color:#0e0d0d" id="button">Overall Progression</h3>
+                <h3 style="text-align:center; color:#0e0d0d" id="button">Overall Progress</h3>
                 <br>
-                <h5 style="color: #0f0f0f;">Click on the <strong>button</strong> on the side to see the details of your
-                    recent progress in BMI, mood, game score, and blood sugar & blood pressure. </h5>
+                <h5 style="color: #0f0f0f;">Click on a <strong>button</strong> on the side to see the details of your
+                    recent progress in BMI, mood, game score, blood sugar and blood pressure. </h5>
                 <h5 style="color: #f7f7f7;"></h5>
             </div>
         </div>
@@ -126,11 +126,8 @@
                                 <br>
                                 <H3>This is your BMI analysis.</H3>
                                 <br>
-                                <h5>This graph is highly interactive, if you click on the graph, you can see if your BMI
-                                    falls within
-                                    the range. </h5>
-                                <h5>There are also indicators at the bottom of the graph to indicate if you are
-                                    currently overweight, underweight or within the range of different types of obesity.
+                                <h5>This graph is highly interactive. If you click on any indicator at the bottom of the graph, you can see if your BMI
+                                    falls within the healthy BMI range, currently overweight, underweight or within the range of different types of obesity.
                                     <thead></thead>
                                 </h5>
                             <!-- code for bmi graph display -->
@@ -167,7 +164,7 @@
                                 <H3>This is your mood analysis</H3>
                                 <br>
                                 <!-- <h5>Please click on the graph to see if your moods have been fluctuating.</h5> -->
-                                <h5>Please click on indicator on the bottom to to see if your moods have been good,
+                                <h5>Please click on indicator on the bottom of the graph to see if your mood have been good,
                                     less-than-ideal or in danger zone.</h5>
                                 <h5>"less-than-ideal" means that you are are often sad or angry.</h5>
                                 <h5>"danger" means that you are consistently sad or angry.</h5>
@@ -191,7 +188,7 @@
                                 <br>
                                 <H3>This is your cognitive analysis</H3>
                                 <br>
-                                <h5>The below graph shows your overall game scores</h5>
+                                <h5>This graph shows your game scores overtime.</h5>
                                 <div class="mood-container">
                                     <div id='score-chart-container'></div>
                                     <div class="mood-avg-info">
@@ -216,10 +213,10 @@
                                 <br>
                                 <H3>This is your health analysis</H3>
                                 <br>
-                                <h5>The below graph shows your blood pressure and blood sugar</h5>
-                                <h5>Click on the indicator at the bottom of the page to see if your blood pressure falls
-                                    within the rage</h5>
-                                <h5>Suggestion is also provided below the graph based on your overall health conditions.
+                                <h5>The graph shows your blood pressure and blood sugar</h5>
+                                <h5>Click on the indicator at the bottom to see if your blood pressure falls
+                                    within the healthy range.</h5>
+                                <h5>Suggestion is also provided below the graph based on your overall health condition.
                                 </h5>
                                 <div class='mood-container'>
                                     <div id="bp-chart-container"></div>
@@ -287,10 +284,10 @@
                     $('.bmi-suggestive-message').html("good, keep going")
                 }
                 else if (bmi_con >= 25 && bmi_con <= 30) {
-                    $('.bmi-suggestive-message').html("overweight, try to to reach a bmi of 25")
+                    $('.bmi-suggestive-message').html("overweight, try to reach a bmi of 25")
                 }
                 else if (bmi_con >= 30 && bmi_con <= 40) {
-                    $('.bmi-suggestive-message').html("obese, try to to reach a bmi of 25")
+                    $('.bmi-suggestive-message').html("obese, try to reach a bmi of 25")
                 }
                 else {
                     $('.bmi-suggestive-message').html("We recommend you visit your family doctor")

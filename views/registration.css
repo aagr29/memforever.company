@@ -1,9 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 /* ==========================================================================
    #FONT
    ========================================================================== */
    .font-robo {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family:'Balsamiq Sans', cursive;
   }
   
   /* ==========================================================================
@@ -122,7 +122,7 @@
   }
   
   body {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
     font-weight: 400;
     font-size: 14px;
   }
@@ -196,7 +196,7 @@
     display: inline-block;
     padding: 0 25px;
     cursor: pointer;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
     color: #fff;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
@@ -233,7 +233,7 @@
   
   .table-condensed td, .table-condensed th {
     font-size: 14px;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
     font-weight: 400;
   }
   
@@ -474,7 +474,7 @@
     h2 {
       letter-spacing: 5px;
       text-transform: uppercase;
-      font: 25px "Lato", sans-serif;
+      font: 25px 'Balsamiq Sans', cursive;
       color: #111;
     }
     
@@ -490,7 +490,7 @@
       letter-spacing: 5px;
       /* text-transform: uppercase; */
       /* font: 18px "Lato", sans-serif; */
-      font: 20px "Helvetica";
+      font: 20px 'Balsamiq Sans', cursive;
       color: rgb(6, 78, 211);
       line-height: 1.5 ;
     } 
@@ -499,7 +499,7 @@
       text-align: center;
       letter-spacing: 5px;
       /* text-transform: uppercase; */
-      font: 15px "Lato", sans-serif;
+      font: 15px  'Balsamiq Sans', cursive;
       color: rgb(8, 8, 8);
       line-height: 1.5 ;
     } 

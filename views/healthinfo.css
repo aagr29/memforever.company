@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 body{
 
   background-color: #fed6e3;
@@ -8,9 +9,20 @@ body{
    #FONT
    ========================================================================== */
    .font-robo {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family:  'Balsamiq Sans', cursive;
   }
   
+
+  /* h4{
+    letter-spacing: 2px;
+    /* font-family:'Balsamiq Sans', cursive;
+    font: 15px; 
+    color: rgb(16, 17, 17);
+    line-height: 1.5 ;
+  
+    font: 18px 'Balsamiq Sans', cursive;
+    /* font: 15px; 
+  } */
   /* ==========================================================================
      #GRID
      ========================================================================== */
@@ -125,13 +137,15 @@ body{
   .page-wrapper {
     min-height: 100vh;
   }
-  
+
   body {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family: 'Balsamiq Sans', cursive;
     font-weight: 400;
     font-size: 14px;
   }
   
+
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
   }
@@ -201,13 +215,13 @@ body{
     display: inline-block;
     padding: 0 25px;
     cursor: pointer;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
-    color: rgb(19, 15, 15);
+    font-family:  'Balsamiq Sans', cursive;
+    color: rgb(10, 10, 10);
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
   }
   
@@ -218,7 +232,7 @@ body{
   }
   
   #buttonSubmit {
-    background: #5ebaf0;
+    background: #f05ed8;
   }
   
   #buttonSubmit:hover {
@@ -238,7 +252,7 @@ body{
   
   .table-condensed td, .table-condensed th {
     font-size: 14px;
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-family:  'Balsamiq Sans', cursive;
     font-weight: 400;
   }
   
@@ -323,7 +337,7 @@ body{
   
   .input--style-1:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: rgb(42, 68, 187);
+    color: rgb(207, 100, 132);
     opacity: 1;
   }
   
@@ -451,15 +465,17 @@ body{
   }
   
   .card-1 .card-heading {
-    background: url("bloodpressure.jpeg") center center/cover no-repeat;
+    /* background: url("bloodpressure.jpeg") center center/cover no-repeat; */
+    /* background-color: #aee9e6;
     opacity: 0.8;
-    padding-top: 210px;
+    padding-top: 10px;
+    padding-bottom: 25px; */
   }
   
   .card-1 .card-body {
     padding: 0 90px;
-    padding-top: 55px;
-    padding-bottom: 65px;
+    padding-top: 25px;
+    padding-bottom: 55px;
   }
   
   @media (max-width: 767px) {
@@ -487,25 +503,30 @@ h3{
 h2 {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font: 25px "Lato", sans-serif;
+  font: 'Balsamiq Sans', cursive;
   color: #111;
 } 
 
 h3{
   letter-spacing: 5px;
   /* text-transform: uppercase; */
-  font: 21px "Helvetica";
+  font:  27px 'Balsamiq Sans', cursive;
   color: rgb(16, 17, 17);
   line-height: 1.5 ;
   /* text-align: justify; */
   
 }
 
-h5{
-  letter-spacing: 5px;
+h4{
+  letter-spacing: 2px;
   /* text-transform: uppercase; */
   /* font: 18px "Lato", sans-serif; */
-  font: 18px "Helvetica";
+  font: 22px 'Balsamiq Sans', cursive;
   color: rgb(8, 8, 8);
   line-height: 1.5 ;
 } 
+
+.container{
+
+  margin-bottom: 20px;
+}

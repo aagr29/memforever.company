@@ -83,7 +83,7 @@ if(shuffledQuestions.length > currentQuestionIndex +1){
 
 function endloopMethod(){
     endloop.classList.add('hide')
-    document.getElementById('question').innerHTML="Congragulations! Game Finished. Your Score is <strong>"+score+"</strong> out of 8" 
+    document.getElementById('question').innerHTML="Congragulations! Your Score is <strong>"+score+"</strong> out of 8. Returning to Home Page now." 
     endofgamebutton.classList.remove('hide')
     process.exit(1)
 }
@@ -148,34 +148,34 @@ const questions = [
           {text: 'Tooth Brush', correct: true},
           {text: 'Glasses', correct: false},
           {text: 'Hair Brush', correct: false},
-          {text: 'tissue', correct: false},]
+          {text: 'Tissue', correct: false},]
     },
     {QID: "2",
     number: 0,
         question: "Apple is a",
     answers: [
-        {text: 'car', correct: false},
-        {text: 'fruit', correct: true},
-        {text: 'bed', correct: false},
-        {text: 'toaster', correct: false},]
+        {text: 'Car', correct: false},
+        {text: 'Fruit', correct: true},
+        {text: 'Bed', correct: false},
+        {text: 'Toaster', correct: false},]
     },
     {QID: "3",
     number: 0,
         question: "Kitchen is where I can",
     answers: [
-      {text: 'withdraw money', correct: false},
-      {text: 'take a shower', correct: false},
-      {text: 'wash my car', correct: false},
-      {text: 'cook dinner', correct: true},]
+      {text: 'Withdraw money', correct: false},
+      {text: 'Take a shower', correct: false},
+      {text: 'Wash my car', correct: false},
+      {text: 'Cook dinner', correct: true},]
     },
     {QID: "4",
     number: 0,
     question: "Animal name beginning with the letter S",
     answers: [
-    {text: 'Tigar', correct: false},
+    {text: 'Tiger', correct: false},
     {text: 'Sugar', correct: false},
     {text: 'Spoon', correct: false},
-    {text: 'Skunk', correct: true},]
+    {text: 'Sheep', correct: true},]
     },
     {QID: "5", 
     number: 0,
@@ -220,7 +220,7 @@ const questions = [
     {text: 'Deposit money', correct: true},
     {text: 'Watch a movie', correct: false},
     {text: 'Cook dinner', correct: false},
-    {text: 'cut my hair', correct: false},]
+    {text: 'Cut my hair', correct: false},]
     }, 
     {QID: "10",
     number: 0,
@@ -233,12 +233,12 @@ const questions = [
     },
     {QID: "11",
     number: 0,
-    question: "What to bring on a rainning day?",
+    question: "What should I bring in a rainning day?",
     answers: [
-    {text: 'umbrella', correct: true},
-    {text: 'instant noodle', correct: false},
-    {text: 'labtop', correct: false},
-    {text: 'sunscreen', correct: false},]
+    {text: 'Umbrella', correct: true},
+    {text: 'Instant noodle', correct: false},
+    {text: 'Laptop', correct: false},
+    {text: 'Sunscreen', correct: false},]
     },
     {QID: "12",
     number: 0,
@@ -269,12 +269,12 @@ const questions = [
     },
     {QID: "15",
     number: 0,
-    question: "Letter is to word as house is to",
+    question: "Letter is to word as room is to",
     answers: [
-    {text: 'mansion', correct: false},
-    {text: 'room', correct: true},
-    {text: 'hospital', correct: false},
-    {text: 'homeless', correct: false},]
+    {text: 'Mansion', correct: false},
+    {text: 'House', correct: true},
+    {text: 'Hospital', correct: false},
+    {text: 'Homeless', correct: false},]
     },
     {QID: "16",
     number: 0,
